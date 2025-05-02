@@ -1,95 +1,96 @@
 ============
-Installation
+Instalação
 ============
 
-Install python
-==============
+Instalar o Python
+=================
 
-Jam.py requires python. If it is not installed you can get the latest 
-version of Python at https://www.python.org/download/ 
+O Jam.py requer o Python. Se ele não estiver instalado, você pode obter a versão mais recente 
+do Python em https://www.python.org/download/
 
-You can use the following versions of Python with Jam.py:
+Você pode usar as seguintes versões do Python com o Jam.py:
 
 Python 2:
 
-* Python 2.7 and newer
+* Python 2.7 ou superior
 
 Python 3:
 
-* Python 3.4 and newer
+* Python 3.4 ou superior
 
-You can verify that Python is installed by typing ``python`` from your shell; 
-you should see something like::
+Você pode verificar se o Python está instalado digitando ``python`` no seu terminal; 
+você deverá ver algo como::
+
 
     Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
     [GCC 5.4.0 20160609] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
     >>> 
     
-If Python 2 and Python 3 are installed try to type ``python3``::
+Se o Python 2 e o Python 3 estiverem instalados, tente digitar ``python3``::
 
     Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
     [GCC 5.4.0 20160609] on linux
     Type "help", "copyright", "credits" or "license" for more information.
     >>>     
 
-Install Jam.py
+Instalar o Jam.py
 ====================
 
-Installing an official release with `pip`
------------------------------------------
+Instalando uma versão oficial com `pip`
+----------------------------------------
 
-This is the recommended way to install Jam.py.
+Esta é a forma recomendada de instalar o Jam.py.
 
-1. Install pip_. The easiest is to use the `standalone pip installer`_. If your
-   distribution already has ``pip`` installed, you might need to update it if
-   it's outdated. (If it's outdated, you'll know because installation won't
-   work.)
+1. Instale o pip_. A maneira mais fácil é usar o `instalador standalone do pip`_.  
+   Se sua distribuição já tiver o ``pip`` instalado, talvez seja necessário atualizá-lo  
+   caso esteja desatualizado. (Se estiver desatualizado, você saberá porque a instalação  
+   não funcionará.)
 
-2. If you're using Linux, Mac OS X or some other flavour of Unix, enter the
-   command: 
+2. Se você estiver usando Linux, Mac OS X ou alguma outra variante do Unix, digite o  
+   seguinte comando:
+
    
    .. code-block:: console
    
     sudo pip install jam.py-v7
     
-   at the shell prompt. 
+   no prompt do terminal.
 
-
-   If you're using Windows, start a command shell with administrator privileges 
-   and run the command::
+   Se você estiver usando Windows, inicie um prompt de comando com privilégios de administrador  
+   e execute o seguinte comando::
 
     ...\> python -m pip install jam.py-v7
 
 
-   This will install Jam.py in your Python installation's ``site-packages`` directory.
+   Isso instalará o Jam.py no diretório ``site-packages`` da sua instalação do Python.
 
 
 .. _pip: http://www.pip-installer.org/
 .. _standalone pip installer: http://www.pip-installer.org/en/latest/installing.html#install-pip
 
 
-Installing an official release manually
----------------------------------------
+Instalando uma versão oficial manualmente
+------------------------------------------
 
-1. Download the package archive. 
+1. Baixe o arquivo do pacote.
 
-2. Create a new directory and unpack the archive there. 
+2. Crie um novo diretório e descompacte o arquivo lá.
 
-3. Go into the directory and run the setup command from command line
+3. Acesse o diretório e execute o comando de instalação a partir do terminal.
 
 .. code-block:: console
 
    $ python setup.py install
-    
-This will install Jam.py in your Python installation’s site-packages directory.
+
+Isso instalará o Jam.py no diretório *site-packages* da sua instalação do Python.
 
 .. note::
-	On some unix like systems you may need to switch to root or run: 
-	sudo python setup.py install
+    Em alguns sistemas do tipo Unix, pode ser necessário mudar para o usuário root ou executar o comando:
+    sudo python setup.py install
 
-.. admonition:: Python on Windows
+.. admonition:: Python no Windows
 
-    If you are just starting with Jam.py and using Windows, you may find
-    :doc:`How to install Jam.py on Windows <../how_to/how_to_install_on_windows>` useful.
+    Se você está começando com o Jam.py e utilizando o Windows, você pode achar útil o
+    :doc:`Como instalar o Jam.py no Windows <../how_to/how_to_install_on_windows>`.
 

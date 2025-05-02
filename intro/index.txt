@@ -1,9 +1,10 @@
 ===============
-Getting started
+Primeiros passos
 ===============
 
-Here you can learn how to install the framework, create a new project, 
-develop a web application and deploy it.
+Aqui você aprenderá como instalar o framework, criar um novo projeto, 
+desenvolver uma aplicação web e implantá-la.
+
 
 .. toctree::
    :maxdepth: 1

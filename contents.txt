@@ -1,5 +1,5 @@
 =============================
-Jam.py documentation contents
+Documentação do Jam.py V7
 =============================
 
 .. toctree:: 

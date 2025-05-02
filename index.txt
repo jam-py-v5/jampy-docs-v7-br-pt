@@ -1,125 +1,119 @@
 =======================
-Jam.py V7 documentation
+Documentação do Jam.py V7
 =======================
 
-Introduction
+Introdução
 ==============
 
+Bem-vindo ao Jam.py! Se você é novo no Jam.py ou no desenvolvimento de aplicações Web sem código (*no-code*), com pouco código (*low-code*) ou com mais código (*more-code*), este é o lugar para encontrar a documentação sobre o Jam.py V7.
 
-Welcome to Jam.py! If you are new to Jam.py or no-code, low-code or more-code Web application development, this is the place to find documentation about the Jam.py V7. 
+A maior diferença em relação ao Jam.py V5 é o suporte a *routing* e o uso do Bootstrap 5, permitindo suporte moderno para dispositivos móveis.  
+Além disso, toda a interface para dispositivos Desktop ou Móveis é orientada por uma abordagem sem código.  
+Basta selecionar o que for necessário para qualquer dispositivo e pronto.
 
-The biggest difference to Jam.py V5 is routing support and Bootstrap 5, enabling modern support for mobile devices.
-In addition, the complete interface for Desktop or Mobile devices is driven by no-code approach. 
-Just select what is needed for any device and off you go.
+.. admonition:: Objetivos
 
+    Instalar o Python e o Jam.py, escolher o banco de dados e o servidor Web, e tomar decisões sobre o Design da Aplicação.
 
-.. admonition:: Objectives
+.. admonition:: Público-alvo
 
-    Installing Python and Jam.py, choosing the database and the Web server and making Application Design decisions.
+    Entusiastas do desenvolvimento Web ou desenvolvedores com pouca ou nenhuma experiência em desenvolvimento ou implantação Web.
 
-.. admonition:: Audience
+.. admonition:: Pré-requisitos
 
-    Web development enthusiasts or developers, with a limited or no experience with the Web development, or deployment.
+    É recomendado ter algum conhecimento de Python e JavaScript. É necessário ter conhecimento geral sobre o prompt de linha de comando e saber digitar comandos.
 
-.. admonition:: Prerequisites
+Como a documentação está organizada
+===================================
 
-    Some Python and JavaScript knowledge is recommended. The general knowledge about the Command Line prompt, and typing
-    the commands is required.
+Aqui está uma visão geral de como a documentação está organizada, para ajudá-lo a encontrar onde procurar por tópicos específicos:
 
+:doc:`Primeiros passos <intro/index>` descreve como instalar o framework, criar 
+um novo projeto, desenvolver uma aplicação web passo a passo e implantá-la.
 
-How the documentation is organized
-==================================
+:doc:`Guias de programação <programming/index>`
+abordam tópicos e conceitos principais em um nível mais abrangente, fornecendo 
+informações de base e explicações úteis.
 
-Here is an overview of how the documentation is organized, to
-help you find out where to look for specific things:
+:doc:`Construtor de aplicações de negócios <admin/index>` é uma descrição detalhada do 
+*Application Builder* usado para o desenvolvimento da aplicação e administração 
+do banco de dados.
 
-:doc:`Getting started <intro/index>` topics describe how to install the framework, create 
-a new project, develop a web application step-by-step, and deploy it.
+:doc:`Guias de referência de classes <refs/index>` contêm referência técnica das 
+APIs das classes do Jam.py.
 
-:doc:`Programming guides<programming/index>`
-discuss key topics and concepts at a fairly high level and provide useful 
-background information and explanation.
+:doc:`Perguntas frequentes <faq/index>` cobre as dúvidas mais frequentes.
 
-:doc:`Business application builder <admin/index>` is a detailed description of 
-the Application Builder used for application development and database 
-administration.
+:doc:`Como fazer <how_to/index>` contém exemplos de código úteis para realizar rapidamente 
+tarefas comuns.
 
-:doc:`Class reference guides <refs/index>` contain technical reference for 
-Jam.py classes APIs.
+Ou visite o
+:doc:`sumário <contents>` ou até mesmo 
 
-:doc:`FAQ <faq/index>` topics covers most frequently asked questions.
+`Dicas de Design de Aplicações com Jam.py`_, para um passo a passo detalhado sobre como construir aplicações ou migrar do MS Access.
 
-:doc:`How to <how_to/index>` contains code examples that can be useful to quickly
-accomplish common tasks.
+.. _`Dicas de Design de Aplicações com Jam.py`: https://jampy-application-design-tips.readthedocs.io/
 
-Or visit the
-:doc:`table of contents <contents>` or even 
+Para baixar este documento como um único PDF, por favor visite:
 
-`Jam.py Application Design Tips`_, for a detailed steps how to build the applications or migrate from MS Access.
+https://jampy-docs-v7-br-pt.readthedocs.io/_/downloads/en/latest/pdf/
 
-.. _`Jam.py Application Design Tips`: https://jampy-application-design-tips.readthedocs.io/
-
-
-To download this document as a single PDF, please visit:
-
-https://jampy-docs-v7.readthedocs.io/_/downloads/en/latest/pdf/
-
-The PDF is built instantly after every commit into the repository. Hence, some data on this site might be older than the PDF.  
+O PDF é gerado instantaneamente após cada *commit* no repositório. Portanto, alguns dados neste site podem estar desatualizados em relação ao PDF.
 
 
-Video Tutorials
-===============
+Tutoriais em Vídeo
+==================
 
-If you are new to Jam.py, we highly recommend that you watch these video tutorials. The videos are referring to
-Jam.py V5. There are minimal changes to the User interface compared to V7.
+Se você é novo no Jam.py, recomendamos fortemente que assista a estes tutoriais em vídeo. Os vídeos se referem ao 
+Jam.py V5. Há mudanças mínimas na interface do usuário em comparação com a versão V7.
 
-It is recommended to watch these videos with a resolution of 1080p
+É recomendado assistir aos vídeos em resolução 1080p.
 
+Tutorial 1 - `Trabalhando com arquivos e imagens`_
 
-Tutorial 1 - `Working with files and images`_ 
+.. _`Trabalhando com arquivos e imagens`: https://youtu.be/9rFXPyfN0Hg
 
-.. _`Working with files and images`: https://youtu.be/9rFXPyfN0Hg
+Tutorial 2 - `Trabalhando com detalhes`_
 
-Tutorial 2 - `Working with details`_ 
+.. _`Trabalhando com detalhes`: https://youtu.be/sbvxE-vEfsM
 
-.. _`Working with details`: https://youtu.be/sbvxE-vEfsM
+Tutorial 3 - `Usuários, papéis, trilha de auditoria/histórico de alterações`_
 
-Tutorial 3 - `Users, roles, audit trail/change history`_ 
+.. _`Usuários, papéis, trilha de auditoria/histórico de alterações`: https://youtu.be/60LiWZa0CpY
 
-.. _`Users, roles, audit trail/change history`: https://youtu.be/60LiWZa0CpY
+Tutorial 4 - `Árvore de tarefas`_
 
-Tutorial 4 - `Task tree`_ 
+.. _`Árvore de tarefas`: https://youtu.be/hsSKqEh6vL4
 
-.. _`Task tree`: https://youtu.be/hsSKqEh6vL4
+Tutorial 5 - Formulários_
 
-Tutorial 5 - Forms_
+.. _Formulários: https://youtu.be/3sh-TSt52P0
 
-.. _Forms: https://youtu.be/3sh-TSt52P0
+Tutorial 6 - `Eventos de formulário`_
 
-Tutorial 6 - `Form events`_
- 
-.. _`Form events`: https://youtu.be/DY463lcv0R4
+.. _`Eventos de formulário`: https://youtu.be/DY463lcv0R4
 
-Tutorial 7 - `Data aware controls`_
- 
-.. _`Data aware controls`: https://youtu.be/fMTq8P4XdGw
+Tutorial 7 - `Controles com reconhecimento de dados`_
 
-Tutorial 8 - `Datasets`_
- 
-.. _`Datasets`: https://youtu.be/gHTYj7h9ljI
+.. _`Controles com reconhecimento de dados`: https://youtu.be/fMTq8P4XdGw
 
-Tutorial 9 - `Datasets Part 2`_
- 
-.. _`Datasets Part 2`: https://youtu.be/1bUGmgBfrNw
+Tutorial 8 - `Conjuntos de dados (Datasets)`_
 
-Tutorial 10 - `Fields and filters`_
- 
-.. _`Fields and filters`: https://youtu.be/ahXqlZrA0fQ
+.. _`Conjuntos de dados (Datasets)`: https://youtu.be/gHTYj7h9ljI
 
-Tutorial 11 - `Client-server interactions`_
- 
-.. _`Client-server interactions`: https://youtu.be/nLOhdA2FX0I
+Tutorial 9 - `Conjuntos de dados - Parte 2`_
 
-Tutorial 12 - `Working with data on the server`_
- 
-.. _`Working with data on the server`: https://youtu.be/dDK78lIjHHY
+.. _`Conjuntos de dados - Parte 2`: https://youtu.be/1bUGmgBfrNw
+
+Tutorial 10 - `Campos e filtros`_
+
+.. _`Campos e filtros`: https://youtu.be/ahXqlZrA0fQ
+
+Tutorial 11 - `Interações cliente-servidor`_
+
+.. _`Interações cliente-servidor`: https://youtu.be/nLOhdA2FX0I
+
+Tutorial 12 - `Trabalhando com dados no servidor`_
+
+.. _`Trabalhando com dados no servidor`: https://youtu.be/dDK78lIjHHY
+
