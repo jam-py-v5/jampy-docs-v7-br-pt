@@ -1,18 +1,18 @@
-==================================
-Integration with existing database
-==================================
+========================================
+Integração com banco de dados existente
+========================================
 
-You can use Jam.py with existing database, that is supported by the framework.
+Você pode usar o Jam.py com um banco de dados existente, desde que seja suportado pelo framework.
 
-* Create a new project with existing database.
+* Crie um novo projeto com o banco de dados existente.
 
-* If you want to import tables in catalogs or journals groups, delete 
-  :doc:`Common fields </programming/data/common_fields>`: 
-  
-  Select Groups node in the project tree, dbl click corresponding group and delete
-  common fields.
-  
-  Or create new empty groups.
+* Se você quiser importar tabelas nos grupos *catalogs* ou *journals*, exclua os
+  :doc:`Campos comuns </programming/data/common_fields>`:
+
+  Selecione o nó *Groups* na árvore do projeto, clique duas vezes no grupo correspondente e exclua
+  os campos comuns.
+ 
+  Ou crie novos grupos vazios.
   
 * Select Project node and click Database button. Set 
   :doc:`DB manual mode </admin/project/database>`
