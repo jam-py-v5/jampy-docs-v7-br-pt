@@ -64,11 +64,11 @@ Abaixo descrevemos as principais etapas que ele realiza:
         item.view_form.find("#delete-btn").prop("disabled", true);
     }
 
-* Executes the
+* Executa o
   :doc:`on_view_form_created </refs/client/group/on_view_form_created>`
-  event handler of the item group and.
+  manipulador de evento do grupo do item e o
   :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-  of the item if they are defined:
+  do item, caso estejam definidos:
 
   .. code-block:: js
 
@@ -80,30 +80,28 @@ Abaixo descrevemos as principais etapas que ele realiza:
         item.on_view_form_created(item);
     }
 
-* Creates a table to display the item data and tables for details if they have 
-  been specified by calling ``create_view_tables`` method
+* Cria uma tabela para exibir os dados do item e tabelas para detalhes, se forem 
+  especificadas, chamando o método ``create_view_tables``
 
-* Executes 
-  :doc:`open </refs/client/item/m_open>`
-  method, that gets the item dataset from the server.
+* Executa o método 
+  :doc:`open </refs/client/item/m_open>`,
+  que obtém o conjunto de dados do item do servidor.
   
-* Finally returns true to prevent calling of the ``on_view_form_created`` of the
-  owner group and the item because the were already called see the 
-  ``_process_event`` method below.
+* Finalmente, retorna verdadeiro para evitar a chamada do ``on_view_form_created`` do
+  grupo proprietário e do item, pois já foram chamados, veja o método 
+  ``_process_event`` abaixo.
   
-After we initialized buttons and before creating tables we call the 
-``on_view_form_created`` event handler of the item itself.
+Depois de inicializar os botões e antes de criar as tabelas, chamamos o 
+manipulador de evento ``on_view_form_created`` do próprio item.
 
-For example, in the client module of the tracks item of the demo app 
-the following 
-:doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-event handler is defined. In it we
-change the height attribute of the 
-:doc:`table_options </refs/client/item/at_table_options>`
-, create the copy of the
-invoice_table set its attributes and call its
+Por exemplo, no módulo client do item de faixas da aplicação demo, 
+o seguinte manipulador de evento :doc:`on_view_form_created </refs/client/item/on_view_form_created>` 
+está definido. Nele, alteramos o atributo height de 
+:doc:`table_options </refs/client/item/at_table_options>`,
+criamos a cópia do
+invoice_table, definimos seus atributos e chamamos o método
 :doc:`create_table </refs/client/item/m_create_table>`
-method that creates a table to display its data. 
+que cria uma tabela para exibir seus dados.
 
 .. code-block:: js
 
@@ -118,32 +116,32 @@ method that creates a table to display its data.
     item.alert('Double-click the record in the bottom table to see track sales.');
   }
 
-The module also has the 
+O módulo também possui o 
 :doc:`on_after_scroll </refs/client/item/on_after_scroll>`
-event handler that will be executed when
-the user moves to the other track and will get the sales of this track. 
+manipulador de evento, que será executado quando
+o usuário se mover para a outra faixa e obterá as vendas dessa faixa. 
 
-This example explains the principle of form events usage.
+Este exemplo explica o princípio do uso de eventos de formulário.
 
-The order of triggering of events depends on the type of event.
+A ordem de disparo dos eventos depende do tipo de evento.
 
+A ordem em que os eventos são gerados depende do tipo de evento.
 
-The order in which events are generated depends on the type of event.
+Eventos de consulta de fechamento
+====================================
 
-Close query events 
-==================
+Quando o usuário tenta fechar o formulário, o evento on_close_query é 
+primeiramente disparado (se definido) para o item.   
 
-When user tries to close the form the on_close_query event is first triggered 
-(if defined) for the item.   
+Se o manipulador de evento retornar true, o aplicativo fecha o formulário; 
+caso contrário, se o manipulador de evento retornar false, o aplicativo 
+mantém o formulário aberto. Caso contrário, o evento on_close_query é 
+disparado (se definido) da mesma forma para o grupo do item e depois para o 
+tarefa.
 
-If the event handler returns true the application closes the form,
-else if the event handler returns false the application leaves the form open,
-otherwise the on_close_query event is triggered (if defined) the same way 
-for the item group and then for the task.
-
-For example, by default there is the 
+Por exemplo, por padrão, existe o 
 :doc:`on_edit_form_close_query </refs/client/item/on_edit_form_close_query>`
-event handler in the task client module:
+manipulador de evento no módulo do cliente da tarefa:
 
 .. code-block:: js
 
@@ -168,12 +166,11 @@ event handler in the task client module:
       return result;
   }
 
-This code checks whether the record has been modified and then opens 
-"Yes No Cancel" dialog.
+Este código verifica se o registro foi modificado e, em seguida, abre 
+a caixa de diálogo "Sim Não Cancelar".
 
-If we want to close the form without this dialog we can defined the following
-event handler in the client module of the item:
-
+Se quisermos fechar o formulário sem essa caixa de diálogo, podemos definir 
+o seguinte manipulador de evento no módulo do cliente do item:
 
 .. code-block:: js
 
@@ -183,17 +180,16 @@ event handler in the client module of the item:
   }
 
 
-Keydown, keyup events
+Eventos Keydown, Keyup
 =====================
 
-These events are triggered the same way as Close query events, starting from the item,
-but if the event handler returns true, the event handlers of the group and task 
-are not executed.
+Esses eventos são disparados da mesma maneira que os eventos de consulta de fechamento, 
+começando pelo item, mas se o manipulador de evento retornar true, os manipuladores de evento 
+do grupo e da tarefa não são executados.
 
-For example, by default there is the 
+Por exemplo, por padrão, existe o 
 :doc:`on_edit_form_keyup </refs/client/item/on_edit_form_keyup>`
-event handler in the task client module:
-
+manipulador de evento no módulo do cliente da tarefa:
 
 .. code-block:: js
 
@@ -204,11 +200,11 @@ event handler in the task client module:
       }
   }
 
-This code saves the changes of the record to the database table when user 
-presses Ctrl+Enter.
+Este código salva as alterações do registro na tabela do banco de dados quando o usuário 
+pressiona Ctrl+Enter.
 
-Suppose we want to save the changes when user presses Enter. Then we write the
-following event handler in the item client module:
+Suponha que queremos salvar as alterações quando o usuário pressiona Enter. Então, escrevemos o 
+seguinte manipulador de evento no módulo do cliente do item:
 
 .. code-block:: js
 
@@ -220,20 +216,20 @@ following event handler in the item client module:
       }
   }
 
-In this case the event handler of the task won't be called when the user press
+Neste caso, o manipulador de evento da tarefa não será chamado quando o usuário pressionar 
 Enter.
 
 
-All other events
-================
+Todos os outros eventos
+=======================
 
-For other events, the event handler of the task is called first, if it doesn't 
-return true, the event handler of the group is executed if it doesn't 
-return true the event handler of the item is called.
+Para outros eventos, o manipulador de evento da tarefa é chamado primeiro; 
+se ele não retornar true, o manipulador de evento do grupo é executado, 
+e se este também não retornar true, o manipulador de evento do item é chamado.
 
+Esse mecanismo é implementado no método ``_process_event`` da classe Item no 
+módulo *jam.js*.
 
-This mechanism is implemented the ``_process_event`` method of the Item class in 
-the *jam.js* module.
 
 .. code-block:: js
 
