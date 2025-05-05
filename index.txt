@@ -56,7 +56,7 @@ Ou visite o
 
 Para baixar este documento como um único PDF, por favor visite:
 
-https://jampy-docs-v7-br-pt.readthedocs.io/_/downloads/en/latest/pdf/
+https://jampy-docs-v7.readthedocs.io/_/downloads/pt-br/latest/pdf/
 
 O PDF é gerado instantaneamente após cada *commit* no repositório. Portanto, alguns dados neste site podem estar desatualizados em relação ao PDF.
 

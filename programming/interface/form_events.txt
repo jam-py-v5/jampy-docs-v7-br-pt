@@ -1,56 +1,56 @@
-/===========
-Form events
-===========
+======================
+Eventos de formulário
+======================
 
-After the form is created and the HTML form template is added to the DOM, 
-the application triggers the following form events during the life cycle of 
-the form:
+Após o formulário ser criado e o template HTML do formulário ser adicionado ao DOM, 
+a aplicação dispara os seguintes eventos de formulário durante o ciclo de vida 
+do formulário:
 
-* ``on_view_form_created`` - the event is triggered when the form has been created but not shown yet
+* ``on_view_form_created`` - o evento é disparado quando o formulário foi criado mas ainda não exibido
 
-* ``on_view_form_shown`` -the event is triggered when the the form has been shown
+* ``on_view_form_shown`` - o evento é disparado quando o formulário foi exibido
 
-* ``on_view_form_close_query`` - the event is triggered when an attempt is made to close the form
+* ``on_view_form_close_query`` - o evento é disparado quando uma tentativa de fechar o formulário é feita
 
-* ``on_view_form_closed`` - the event is triggered when the form has been closed
+* ``on_view_form_closed`` - o evento é disparado quando o formulário foi fechado
 
-* ``on_view_form_keydown`` - the event is triggered when the keydown event occurs for the form
+* ``on_view_form_keydown`` - o evento é disparado quando ocorre um evento de pressionar tecla no formulário
 
-* ``on_view_form_keyup`` - the event is triggered when the keyup event occurs for the form
+* ``on_view_form_keyup`` - o evento é disparado quando ocorre um evento de soltar tecla no formulário
 
-For other form types - edit, filter and param, replace 'view' with the form type, 
-for example ``on_edit_form_created`` for edit form.
+Para outros tipos de formulário – edit, filter e param – substitua 'view' pelo tipo de formulário, 
+por exemplo ``on_edit_form_created`` para formulário de edição.
 
-We will first explain how to use the ``on_view_form_created`` event.
+Primeiro vamos explicar como usar o evento ``on_view_form_created``.
 
-When the user clicks on menu item the application executes the
+Quando o usuário clica em um item do menu, a aplicação executa o método 
 :doc:`view </refs/client/item/m_view>`
-method of corresponding task tree item, this method creates a form using its HTML 
-form template and triggers first the 
-:doc:`on_view_form_created </refs/client/task/on_view_form_created>` event of 
-the task.
+do item correspondente da árvore de tarefas, este método cria um formulário usando seu template HTML 
+e dispara primeiro o evento 
+:doc:`on_view_form_created </refs/client/task/on_view_form_created>` 
+da tarefa.
 
-When you create a new project, the task client module already contains the 
-code, including the  
-:doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-event handler. This event handler is executed each time the view form is created
-and defines the default behavior of view forms. 
+Quando você cria um novo projeto, o módulo client da tarefa já contém o 
+código, incluindo o manipulador de evento  
+:doc:`on_view_form_created </refs/client/task/on_view_form_created>`.
+Esse manipulador de evento é executado toda vez que um formulário de visualização é criado
+e define o comportamento padrão dos formulários de visualização.
 
-You can open the task client module to see this event handler. 
-If you need to change the default behavior for all view forms of the project, 
-you should do it here.
+Você pode abrir o módulo client da tarefa para ver este manipulador de evento. 
+Se precisar alterar o comportamento padrão de todos os formulários de visualização do projeto, 
+deve fazê-lo aqui.
 
-Below we describe the major steps it performs:
+Abaixo descrevemos as principais etapas que ele realiza:
 
-* Initializes the
+* Inicializa o
   :doc:`view_form </refs/client/item/at_view_form>`
-  and
+  e
   :doc:`table_options </refs/client/item/at_table_options>`
-  that are used by some methods when view form and table are created.
+  que são usados por alguns métodos quando o formulário de visualização e a tabela são criados.
 
-* Assigns JQuery event handlers for default buttons to methods of the item,
-  depending on the user rights. In the example below the delete button is.
-  Initialized:
+* Atribui manipuladores de eventos JQuery para botões padrão a métodos do item,
+  dependendo dos direitos do usuário. No exemplo abaixo, o botão de deletar é 
+  inicializado:
 
   .. code-block:: js
 

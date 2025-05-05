@@ -1,12 +1,12 @@
-==============
-Reserved words
-==============
+===================
+Palavras reservadas
+===================
 
-Since Jam.py is Python and JavaScript language framework, valid Python and JavaScript identifiers 
-should be used.
-In addition, for all supported databases, their own valid identifiers should be used.
+Como o Jam.py é um framework que utiliza as linguagens Python e JavaScript, 
+devem ser usados identificadores válidos de Python e JavaScript.  
+Além disso, para todos os bancos de dados suportados, devem ser utilizados identificadores válidos de acordo com cada banco.
 
-The file containing example list is ``keywords.py``, with below content:
+O arquivo que contém uma lista de exemplos é ``keywords.py``, com o conteúdo abaixo:
 
 .. code-block:: py
 

@@ -1,27 +1,25 @@
-====================
-Working with modules
-====================
+=======================
+Trabalhando com módulos
+=======================
 
-For every item of the project :doc:`task tree <task_tree>` a developer can write 
-code that will be executed on the client or server. In Application builder for every 
-item there is two upper-right buttons **Client module** and **Server module**. 
-Clicking on these will open the
+Para cada item da :doc:`árvore de tarefas <task_tree>` do projeto, o desenvolvedor pode escrever 
+código que será executado no cliente ou no servidor. No Application builder, para cada 
+item há dois botões no canto superior direito: **Client module** e **Server module**. 
+Clicando nesses botões, será aberto o
 :doc:`code editor </admin/code_editor>`.
 
-Every item has a predefined set of events that could be triggered by  
-application. An event is a function defined in the module of an item that starts 
-with the **on_** prefix. All published events are listed in the Events tab of the 
-information pane of the
+Cada item possui um conjunto predefinido de eventos que podem ser disparados pela 
+aplicação. Um evento é uma função definida no módulo de um item que começa com o prefixo **on_**. 
+Todos os eventos disponíveis estão listados na aba Events do painel de informações do
 :doc:`code editor </admin/code_editor>`
 
-In the 
+No 
 :doc:`code editor </admin/code_editor>`
-the developer 
-can write code for these events as well as define some functions. 
+o desenvolvedor 
+pode escrever o código para esses eventos, assim como definir funções auxiliares. 
 
-For example the following code means that immediately after adding a new record 
-to the Invoices journal of the Demo project, the value of the invoicedate field 
-will be equal to the current date.
+Por exemplo, o código abaixo significa que, imediatamente após adicionar um novo registro 
+ao journal Invoices do projeto Demo, o valor do campo invoicedate será igual à data atual.
 
 .. code-block:: js
 
@@ -31,15 +29,15 @@ will be equal to the current date.
 
 
 .. note::
-    These events and functions became attributes of the item and could be 
-    accessed anywhere in the project code.
+    Esses eventos e funções tornam-se atributos do item e podem ser 
+    acessados de qualquer lugar no código do projeto.
 
-For example, the following code defined in the item client module will execute
-on_edit_form_created event handler defined in the **Customers** item for this item.
+Por exemplo, o código a seguir, definido no módulo client do item, irá executar
+o manipulador de evento on_edit_form_created definido no item **Customers** para este item.
 
 .. code-block:: js
 
     function on_edit_form_created(item) { 
         task.customers.on_edit_form_created(item);
     } 
-  
+

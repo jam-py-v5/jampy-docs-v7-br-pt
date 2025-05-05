@@ -2,75 +2,74 @@
 Workflow
 ========
 
-In the Jam.py framework, two tasks work at the same time: the Application builder 
-and the Project. 
-Each of them represents a tree of objects - there is the Application builder task 
-tree and the Project task tree. Therefore, before considering the Jam.py workflow, 
-you need to familiarize yourself with the concept of the 
+No framework Jam.py, duas tarefas funcionam ao mesmo tempo: o Application builder 
+e o Project. 
+Cada uma delas representa uma árvore de objetos – existe a árvore de tarefas do Application builder 
+e a árvore de tarefas do Project. Portanto, antes de considerar o fluxo de trabalho do Jam.py, 
+você precisa se familiarizar com o conceito de 
 :doc:`task tree <task_tree>`.
 
-The the Jam.py workflow is the following:
+O fluxo de trabalho do Jam.py é o seguinte:
 
-* When server.py is run it creates WSGI application that, in its own turn, 
-  creates the Application builder task tree.
-* The Project task tree is created on the server by Application builder after the 
-  server receives first request from the Project client. To do so, the 
-  Application builder uses metadata stored in admin.sqlite database in the root folder
-  of the project. After creating a task tree the server application triggers the
-  :doc:`on_created </refs/server/task/on_created>`
-  event, that can be used to initialize the server task tree.
-* When an application on the client (Application builder or Project) is first run in 
-  the browser (after ``builder.html`` or ``index.html`` have been loaded) the 
-  empty task object is built that sends to the server a request to initialize 
-  itself.
-* If the project 
+* Quando o ``server.py`` é executado, ele cria uma aplicação WSGI que, por sua vez, 
+  cria a árvore de tarefas do Application builder.
+* A árvore de tarefas do Project é criada no servidor pelo Application builder após o 
+  servidor receber a primeira requisição do cliente do Project. Para isso, o 
+  Application builder usa os metadados armazenados no banco de dados ``admin.sqlite`` na pasta raiz
+  do projeto. Após criar a árvore de tarefas, a aplicação no servidor dispara o evento
+  :doc:`on_created </refs/server/task/on_created>`,
+  que pode ser usado para inicializar a árvore de tarefas do servidor.
+* Quando uma aplicação no cliente (Application builder ou Project) é executada pela primeira vez no 
+  navegador (após ``builder.html`` ou ``index.html`` serem carregados), o 
+  objeto de tarefa vazio é construído e envia uma requisição ao servidor para se 
+  inicializar.
+* Se o parâmetro 
   :doc:`safe mode </admin/project/parameters>`
-  parameter is set, the framework checks if a user is logged, before executing 
-  any request. If not, then the 
-  application on the client creates a login form, and after the user inputs its 
-  login and password, the client task sends the server a request to login.
-* After successful login or if the project
+  do projeto estiver definido, o framework verifica se há um usuário autenticado antes de executar 
+  qualquer requisição. Caso contrário, a 
+  aplicação no cliente cria um formulário de login, e após o usuário inserir seu 
+  login e senha, a tarefa do cliente envia uma requisição ao servidor para autenticar.
+* Após o login com sucesso ou se o parâmetro 
   :doc:`safe mode </admin/project/parameters>`
-  parameter is not set, the server sends the client information about the 
-  requested task. The task on the client builds its tree, based on this 
-  information, assigns event handlers to its objects and executes 
-  :doc:`on_page_loaded </refs/client/task/on_page_loaded>`
-  event handler. 
-* In this event handler a developer should attach JQuery event handler 
-  functions to HTML elements of the DOM, defined in the ``index.html`` file. 
-  In these functions a developer can use methods of items of the 
+  do projeto não estiver definido, o servidor envia ao cliente as informações sobre a 
+  tarefa solicitada. A tarefa no cliente constrói sua árvore com base nessas 
+  informações, atribui os manipuladores de eventos a seus objetos e executa o 
+  manipulador de evento 
+  :doc:`on_page_loaded </refs/client/task/on_page_loaded>`.
+* Neste manipulador de evento, o desenvolvedor deve anexar funções manipuladoras 
+  de eventos do JQuery aos elementos HTML do DOM, definidos no arquivo ``index.html``. 
+  Nessas funções, o desenvolvedor pode usar os métodos dos itens da 
   :doc:`task tree <task_tree>`
-  to perform some specific tasks. 
-  These methods, when executed, trigger different events in which other methods 
-  could be called and so on. See
+  para executar tarefas específicas. 
+  Esses métodos, quando executados, disparam diferentes eventos nos quais outros métodos 
+  podem ser chamados e assim por diante. Veja
   :doc:`Client side programming <interface/index>`.
-* Items of the task tree, that have corresponding database tables, have methods 
-  to read and write data in the server database. See 
+* Itens da árvore de tarefas que possuem tabelas de banco de dados correspondentes possuem métodos 
+  para ler e gravar dados no banco de dados do servidor. Veja 
   :doc:`Data programming <data/index>`.
-* The report items generate the reports on the server, based on the LibrOffice
-  templates. See
+* Os itens de relatório geram os relatórios no servidor com base em modelos do LibreOffice.
+  Veja
   :doc:`Programming reports <reports/index>`.
-* All the items, whose methods generate a request to the server, do it the 
-  following way: they call the method of the task that sends to the server the 
+* Todos os itens cujos métodos geram uma requisição para o servidor o fazem da 
+  seguinte forma: eles chamam o método da tarefa que envia ao servidor o 
   :doc:`ID </refs/client/abstr_item/at_id>`
-  of the task, the
+  da tarefa, o
   :doc:`ID </refs/client/abstr_item/at_id>`
-  the item, the type of the request and its parameters.
-  The server on receiving the request, based on passed IDs, finds the task 
-  (it can be Project task or Application builder task) and the item on the server, 
-  executes the corresponding method with passed parameters and returns the result 
-  of the execution to the client. These server methods could trigger their own 
-  events that can override the default behavior. See
+  do item, o tipo da requisição e seus parâmetros.
+  O servidor, ao receber a requisição, com base nos IDs recebidos, encontra a tarefa 
+  (que pode ser a tarefa do Project ou do Application builder) e o item no servidor, 
+  executa o método correspondente com os parâmetros recebidos e retorna o resultado 
+  da execução para o cliente. Esses métodos do servidor podem disparar seus próprios 
+  eventos que podem sobrescrever o comportamento padrão. Veja
   :doc:`Server side programming <server/index>`
 
 Video
 =====
 
-`Form events`_ and `Client-server interactions`_ video tutorials illustrate 
-the workflow of Jam.py project.
+Os tutoriais em vídeo `Form events`_ e `Client-server interactions`_ ilustram 
+o fluxo de trabalho de um projeto Jam.py.
  
 .. _`Form events`: https://youtu.be/DY463lcv0R4
 
 .. _`Client-server interactions`: https://youtu.be/nLOhdA2FX0I
 
-  

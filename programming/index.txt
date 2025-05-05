@@ -1,8 +1,8 @@
-==================
-Jam.py programming
-==================
+=====================
+Programação em Jam.py
+=====================
 
-Here, the basic concepts of Jam.py programming  will be explained.
+Aqui serão explicados os conceitos básicos da programação em Jam.py.
 
 .. toctree::
    :maxdepth: 2
