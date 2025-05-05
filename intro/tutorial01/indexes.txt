@@ -1,32 +1,31 @@
 =======
-Indexes
+Índices
 =======
 
-Let's set the default sorting of records of the "Contacts" journal.
-To do so, click the 
-:doc:`Order </admin/items/order_dialog>`
-button.
+Vamos definir a ordenação padrão dos registros do diário "Contatos".  
+Para isso, clique no botão  
+:doc:`Ordem </admin/items/order_dialog>`.
 
-By default the records are displayed in the order they were created. To change this,
-move some of the column headers from the list on the right to the list on the left
-using the **left** button, and change their priority using the **up** and **down**
-buttons (higher priority on the top).
+Por padrão, os registros são exibidos na ordem em que foram criados. Para alterar isso,  
+mova alguns dos cabeçalhos de coluna da lista da direita para a lista da esquerda  
+usando o botão **esquerda**, e altere sua prioridade usando os botões **cima** e **baixo**  
+(maior prioridade no topo).
 
 .. image:: /intro/_images/order_dlg_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Contacts order
+	:alt: Ordem dos Contatos
 
-In the example above, we set the default sorting to be
-descending contact date.
+No exemplo acima, definimos a ordenação padrão como sendo  
+por data de contato decrescente.
 
-We can create a corresponding index for the “Contacts” journal database table. 
-Click the **Indices** button to open
-:doc:`Indices Dialog </admin/items/indices_dialog>` 
-and then click the **New** button and specify the index in a similar way:
+Podemos criar um índice correspondente para a tabela do banco de dados do diário “Contatos”.  
+Clique no botão **Índices** para abrir o  
+:doc:`Diálogo de Índices </admin/items/indices_dialog>`  
+e depois clique no botão **Novo** e especifique o índice de forma semelhante:
 
 .. image:: /intro/_images/index_dlg_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: New index
+	:alt: Novo índice
 

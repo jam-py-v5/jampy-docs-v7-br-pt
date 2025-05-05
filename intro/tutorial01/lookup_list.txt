@@ -1,37 +1,37 @@
-============
-Lookup lists
-============
+==================
+Listas de seleção
+==================
 
-Now we create a 
-:doc:`lookup List </admin/lookup_lists>`
-"Status".  Lookup lists are used to create "dropdown" field, with a limited
-set of possible values.
+Agora vamos criar uma 
+:doc:`Lista de seleção </admin/lookup_lists>`
+"Status". As listas de seleção são usadas para criar campos do tipo "dropdown", com um conjunto
+limitado de valores possíveis.
 
-Select the "Task" node in the project tree and click the **Lookup lists** button.
+Selecione o nó "Tarefa" na árvore do projeto e clique no botão **Listas de seleção**.
 
 .. image:: /intro/_images/lookup_lists_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Lookup lists
+	:alt: Listas de seleção
 
-It is initially empty. Click the **New** button to create a new list.
-Specify the new lookup list name and add a list of integer-text pairs:
+Inicialmente ela estará vazia. Clique no botão **Novo** para criar uma nova lista.
+Especifique o nome da nova lista de seleção e adicione uma lista de pares inteiro-texto:
 
 .. image:: /intro/_images/lookup_list_ready_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Lookup list entries
-	
-Save the Lookup	Lists with the **OK** button, then edit the "Contacts" journal
-to add the new "Status" field.
+	:alt: Entradas da lista de seleção
+
+Salve as Listas de Seleção com o botão **OK**, depois edite o diário "Contatos"
+para adicionar o novo campo "Status".
 
 .. image:: /intro/_images/status_field_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Status field
+	:alt: Campo Status
 
-As for lookup fields, set the caption and name and leave the type empty. Then go to
-the **Lookup** tab, and set the **Lookup value list** attribute to the "Status" lookup list:
+Para campos de seleção, defina a legenda e o nome, e deixe o tipo vazio. Em seguida, vá para
+a aba **Seleção**, e defina o atributo **Lista de valores de seleção** como a lista de seleção "Status":
 
 
 .. image:: /intro/_images/status_lookup_jampy.png
@@ -39,32 +39,31 @@ the **Lookup** tab, and set the **Lookup value list** attribute to the "Status" 
 	:align: center
 	:alt: Status lookup field
 	
-Finally, before saving, open the "Customer" field we created earlier,
-and set the **Required** attribute (in the "Field" tab) and the **Typeahead** attribute
-(in the "Lookup" tab). When the **Typeahead** is checked, autocompletion/typeahead is
-enabled for the lookup field.
+Por fim, antes de salvar, abra o campo "Cliente" que criamos anteriormente
+e defina o atributo **Obrigatório** (na aba "Campo") e o atributo **Auto completar** 
+(na aba "Seleção"). Quando **Auto completar** está marcado, a funcionalidade de 
+autocompletar é ativada para o campo de seleção.
 
 .. image:: /intro/_images/customer_required_attr_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Customer attributes
+	:alt: Atributos do Cliente
 
 .. image:: /intro/_images/customer_typeahead_attr_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Customer typeahead attribute
+	:alt: Atributo de auto completar do Cliente
 
-
-While we are here, set **Default value** of the "Contact date" field to "CURRENT DATETIME",
-so that the date will be automatically initialised to the current date and time.
+Aproveitando, defina o **Valor padrão** do campo "Data do contato" como "CURRENT DATETIME",
+para que a data seja automaticamente inicializada com a data e hora atuais.
 
 .. image:: /intro/_images/contact_date_default_value_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Contact date field default value
+	:alt: Valor padrão do campo Data do contato
 
-We can likewise select a **Default value** for the "Status" field, by selecting a value
-in the drop-down lists.
+Da mesma forma, podemos selecionar um **Valor padrão** para o campo "Status", 
+escolhendo um valor na lista suspensa.
 
 .. image:: /intro/_images/status_default_value_jampy.png
 	:scale: 50%

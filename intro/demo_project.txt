@@ -1,33 +1,33 @@
-============
-Demo project
-============
+========================
+Projeto de demonstração
+========================
 
-The framework has a full-fledged demo application that demonstrates programming 
-techniques used in the framework. 
+O framework possui uma aplicação de demonstração completa que mostra as técnicas 
+de programação utilizadas no Jam.py.
 
-The demo is located in the demo folder of the Jam.py package downloaded from Github. There is also a stand alone or an 
-portable application for Windows x64 provided `here <https://github.com/platipusica/jampy-exe/releases/download/Pump/jampy_win_64.exe>`_.
+A demonstração está localizada na pasta *demo* do pacote Jam.py baixado do Github.  
+Também há uma aplicação standalone ou portátil para Windows x64, disponível `aqui <https://github.com/platipusica/jampy-exe/releases/download/Pump/jampy_win_64.exe>`_.
 
-The portable application depends on LibreOffice for Reports and nothing more. Just run it and point the browser as per below.
+A aplicação portátil depende apenas do LibreOffice para geração de relatórios, sem necessidade de mais nada.  
+Basta executá-la e apontar o navegador conforme abaixo.
 
-To start the demo application go to the demo folder and run *server.py* script.
+Para iniciar a aplicação de demonstração, vá até a pasta *demo* e execute o script *server.py*.
 
 .. code-block:: console
 
     $ ./server.py
 
-
-Open a Web browser and enter
+Abra um navegador e digite:
 
 .. code-block:: console
 
-	127.0.0.1:8080
+    127.0.0.1:8080
 
-in the address bar.
+na barra de endereços.
 
-To see the
-:doc:`Application builder </admin/index>`,
-open a new page in a browser and enter
+Para acessar o
+:doc:`Construtor de Aplicações </admin/index>`,
+abra uma nova aba no navegador e digite:
 
 .. code-block:: console
 

@@ -1,20 +1,19 @@
-=========================
-Tutorial. Part 3. Details 
-=========================
+============================
+Tutorial. Parte 3. Detalhes 
+============================
 
-In this part of the tutorial we will explain how to work with details.
+Nesta parte do tutorial, explicaremos como trabalhar com detalhes.
 
 
-Let's select the "Task/Groups" item in the project tree and and click the **New** 
-button at the bottom right corner of the page:
-
+Vamos selecionar o item "Task/Groups" na árvore do projeto e clicar no botão **Novo**  
+no canto inferior direito da página:
 
 .. image:: /intro/_images/detail_group_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: detail_group_jampy.png
 
-Name it "Details":
+Nomeie-o como "Detalhes":
 
 .. image:: /intro/_images/detail_group_not_visible_jampy.png
 	:scale: 50%
@@ -22,10 +21,10 @@ Name it "Details":
 	:alt: detail_group_not_visible_jampy.png
 
 
-In the
-:doc:`Item Editor </admin/items/item_editor_dialog>`
-dialog box, we will name the new item "To do list" and add the two fields 
-"Created" and "To do" in the same way as in the previous tutorial:
+Na caixa de diálogo  
+:doc:`Editor de Item </admin/items/item_editor_dialog>`,  
+nomearemos o novo item como "Lista de tarefas" e adicionaremos os dois campos  
+"Criado em" e "Tarefa" da mesma forma como feito no tutorial anterior:
 
 .. image:: /intro/_images/new_detail_jampy.png
 	:scale: 50%
@@ -33,70 +32,69 @@ dialog box, we will name the new item "To do list" and add the two fields
 	:alt: new_detail_jampy.png
 
 
-After saving the "To do list", select the "Contacts" journal and click the 
-**Details** button in the right pane to open the 
-:doc:`Details Dialog </admin/items/details_dialog>`.
-Click the right arrow button to add the "To do list" to the "Contacts" details 
-and the **OK** button to save changes.
+Após salvar a "Lista de tarefas", selecione o diário "Contatos" e clique no botão  
+**Detalhes** no painel direito para abrir o  
+:doc:`Diálogo de Detalhes </admin/items/details_dialog>`.  
+Clique no botão de seta para a direita para adicionar a "Lista de tarefas" aos detalhes de "Contatos"  
+e clique no botão **OK** para salvar as alterações.
 
 .. image:: /intro/_images/details_dialog_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: details_dialog_jampy.png
 
-A new "To do list" item will be created as a child of the "Contacts" journal.
+Um novo item "Lista de tarefas" será criado como filho do diário "Contatos".
 
 .. image:: /intro/_images/contacts_to_do_list_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: contacts_to_do_list_jampy.png
 
-Select the "Contacts" journal again and  click the **Edit form** button to open the
-:doc:`Edit Form Dialog </admin/items/edit_form_dialog>`. Select **Form** tab,
-click the button to the right of the **Edit details** input and select the 
-"To do list" check box.
+Selecione novamente o diário "Contatos" e clique no botão **Formulário de edição** para abrir o  
+:doc:`Diálogo de Formulário de Edição </admin/items/edit_form_dialog>`.  
+Selecione a guia **Formulário**, clique no botão à direita do campo **Editar detalhes**  
+e marque a caixa "Lista de tarefas".
 
 .. image:: /intro/_images/details_to_edit_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: details_to_edit_jampy.png
 
-Let's update the project page and dblclick on the contact. Now we can add items 
-to the to-do list of the contact.
+Vamos atualizar a página do projeto e dar um duplo clique no contato.  
+Agora podemos adicionar itens à lista de tarefas do contato.
 
 .. image:: /intro/_images/new_to_do_item_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: new_to_do_item_jampy.png
 
-
-Click the **Groups** node in the project tree, dblclick the **Details** row and 
-set Visible attribute to true.
+Clique no nó **Grupos** na árvore do projeto, dê um duplo clique na linha **Detalhes**  
+e defina o atributo Visível como verdadeiro.
 
 .. image:: /intro/_images/detail_group_visible_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: detail_group_visible_jampy.png
 
-When we refresh the project page, we will see the "To do list" item in the main menu.	
-Click on it to see the to do list of all contacts.
+Ao atualizar a página do projeto, veremos o item "Lista de tarefas" no menu principal.  
+Clique nele para ver a lista de tarefas de todos os contatos.
 
 .. image:: /intro/_images/todo_all_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: todo_all_jampy.png
 
-Select the "Contacts" journal again and  click the **View form** button to open the
-:doc:`View Form Dialog </admin/items/view_form_dialog>`.
-Select **Form** tab, click the button to the right of the **View detail** input and 
-select the "To do list" check box.
+Selecione novamente o diário "Contatos" e clique no botão **Formulário de visualização** para abrir o  
+:doc:`Diálogo de Formulário de Visualização </admin/items/view_form_dialog>`.  
+Selecione a guia **Formulário**, clique no botão à direita do campo **Visualizar detalhe**  
+e marque a caixa "Lista de tarefas".
 
 .. image:: /intro/_images/contacts_view_detail_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: contacts_view_detail_jampy.png
 
-In the project page will see that the to-do list changes when the contact changes.
+Na página do projeto, veremos que a lista de tarefas muda conforme o contato selecionado muda.
 
 .. image:: /intro/_images/todo_completed_jampy.png
 	:scale: 50%

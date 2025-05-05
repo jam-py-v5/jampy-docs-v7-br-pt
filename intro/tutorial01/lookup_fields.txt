@@ -1,42 +1,42 @@
-=============
-Lookup fields
-=============
+==================
+Campos de seleção
+==================
 
-Now, we will create the "Contacts" journal and use lookup fields to connect contacts to customers. Lookup fields allow an element of one item (i.e., catalog or journal) to reference an element from an other item.
+Agora, vamos criar o diário "Contatos" e usar campos de seleção para conectar contatos aos clientes. Campos de seleção permitem que um elemento de um item (ou seja, catálogo ou diário) referencie um elemento de outro item.
 
-Select the "Journals" group in the project task tree, and add a new journal in the
-same way that we created the "Customers" catalog. Journals, like catalogs, correspond to different tables in the database. See this :doc:`link </faq/faq_catalogs_vs_journals>` for more information.
+Selecione o grupo "Diários" na árvore de tarefas do projeto e adicione um novo diário 
+da mesma forma que criamos o catálogo "Clientes". Diários, assim como catálogos, 
+correspondem a diferentes tabelas no banco de dados. Veja este :doc:`link </faq/faq_catalogs_vs_journals>` para mais informações.
 
-First, add a "Contact date" field of the ``DATETIME`` type,
-and a "Notes" field of the ``TEXT`` type.
+Primeiro, adicione um campo "Data do contato" do tipo ``DATETIME``,
+e um campo "Observações" do tipo ``TEXT``.
 
-Then, add the
-:doc:`lookup field </programming/data/lookup_fields>`
-"Customer", which will store a reference to a record in the "Customers" catalog.
+Depois, adicione o
+:doc:`campo de seleção </programming/data/lookup_fields>`
+"Cliente", que armazenará uma referência a um registro no catálogo "Clientes".
 
 .. image:: /intro/_images/contacs_cutomer_fld_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Adding Customer field
+	:alt: Adicionando campo Cliente
 
-To create a lookup field, first specify its caption and name, and leave the type
-empty. Then go to the **Lookup** tab and click the button to the right of the **Lookup item** input.
-
+Para criar um campo de seleção, primeiro informe a legenda e o nome do campo, e deixe 
+o tipo vazio. Em seguida, vá até a aba **Seleção** e clique no botão à direita do campo **Item de seleção**.
 
 .. image:: /intro/_images/cutomers_lookup_tab_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Cutomer lookup tab
+	:alt: Aba de seleção do Cliente
 
-This brings up a list of items. Double click the "Customer" record to select it.
+Isso abrirá uma lista de itens. Clique duas vezes no registro "Cliente" para selecioná-lo.
 
 .. image:: /intro/_images/cutomers_lookup_item_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Selecting Customer lookup item
+	:alt: Selecionando item de seleção Cliente
 
-Next, we need to specify a lookup field. This is how the customer will be located.
-Here we choose "Lastname". Leave the other fields empty and press **OK**.
+Em seguida, precisamos especificar um campo de pesquisa. É assim que o cliente será localizado.
+Aqui escolhemos "Sobrenome". Deixe os demais campos em branco e clique em **OK**.
 
 
 .. image:: /intro/_images/lastname_lookup_jampy.png
@@ -44,10 +44,10 @@ Here we choose "Lastname". Leave the other fields empty and press **OK**.
 	:align: center
 	:alt: Lastname lookup field
 
-Repeat this procedure to add the "Firstname" and "Phone" lookup fields.
-For these fields, we specify the "Customer" field as their **Master field** attribute.
-This connects them to the first "Lastname" lookup field we created, so that all three
-lookup fields refer to the same customer.
+Repita este procedimento para adicionar os campos de seleção "Nome" e "Telefone".  
+Para esses campos, especifique o campo "Cliente" como o atributo **Campo mestre**.  
+Isso conecta esses campos ao primeiro campo de seleção "Sobrenome" que criamos,  
+de modo que os três campos de seleção referenciam o mesmo cliente.
 
 .. image:: /intro/_images/contacts_firstname_jampy.png
 	:scale: 50%
@@ -57,34 +57,33 @@ lookup fields refer to the same customer.
 .. image:: /intro/_images/phone_lookup_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Phone lookup field
-	
-Click the **OK** button to save the "Contacts" item. 
+	:alt: Campo de seleção Telefone
+
+Clique no botão **OK** para salvar o item "Contatos".
 
 .. image:: /intro/_images/contacts_sql_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Contacts sql
+	:alt: SQL de Contatos
 
-As you can see, there are no "FIRSTNAME" and "PHONE" fields in the ``CRM_CONTACTS`` 
-table. This is due to the fact that we have set **Master field** attribute of these 
-fields to "Customer". The "Customer" field will store a reference to a record in the
-"Customers" catalog, and this record will have the "Firstname" and "Phone" fields.
+Como você pode ver, não há campos "NOME" e "TELEFONE" na tabela ``CRM_CONTACTS``.  
+Isso ocorre porque definimos o atributo **Campo mestre** desses campos como "Cliente".  
+O campo "Cliente" armazenará uma referência a um registro no catálogo "Clientes",  
+e esse registro conterá os campos "Nome" e "Telefone".
 
-Refresh the project page and, in the "Contacts" page, click the **New** button.
-You will see that there is a small button to the right of the "Customer" input.
+Atualize a página do projeto e, na página "Contatos", clique no botão **Novo**.  
+Você verá que há um pequeno botão à direita do campo de entrada "Cliente".
 
 .. image:: /intro/_images/customer_input_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Customer input
+	:alt: Entrada Cliente
 
-Click on it and select a record in the "Customers" catalog: the
-fields "Customer", "Firstname" and "Phone" will be filled automatically.
-
+Clique nele e selecione um registro no catálogo "Clientes":  
+os campos "Cliente", "Nome" e "Telefone" serão preenchidos automaticamente.
 
 .. image:: /intro/_images/customer_input_selected_jampy.png
 	:scale: 50%
 	:align: center
-	:alt: Customer input selected
+	:alt: Cliente selecionado
 

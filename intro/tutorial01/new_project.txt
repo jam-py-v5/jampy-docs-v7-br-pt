@@ -1,65 +1,63 @@
-===========
-New project
-===========
+=============
+Novo projeto
+=============
 
-We'll assume that jam.py is already installed. If not, see 
-:doc:`Installation </intro/install>`
-guide how to do it.
+Vamos supor que o Jam.py já esteja instalado. Se não, veja o guia de 
+:doc:`Instalação </intro/install>` para saber como fazer isso.
 
-First create a folder for the new project. In this folder, execute the
-``jam-project.py`` script to create the project structure.
+Primeiro, crie uma pasta para o novo projeto. Dentro dessa pasta, execute o
+script ``jam-project.py`` para criar a estrutura do projeto.
 
 .. code-block:: console
 
     $ jam-project.py
 
-After that, run the ``server.py`` script that ``jam-project.py`` created:
+Após isso, execute o script ``server.py`` que o ``jam-project.py`` criou:
 
 .. code-block:: console
 
     $ ./server.py
 
-Now, to complete the creation of the project, open the web browser and go to 
+Agora, para completar a criação do projeto, abra o navegador e acesse
 
 .. code-block:: console
 
     127.0.0.1:8080/builder.html
 
-to open the Application Builder. You should see the language selection dialog.
-
+para abrir o Construtor de Aplicações. Você deverá ver o diálogo de seleção de idioma.
 
 .. image:: /intro/_images/lang_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Select language dialog
+    :scale: 50%
+    :align: center
+    :alt: Selecione o idioma
 
-Use the browse button to select **English**, and click the **OK** button.
-The project parameters dialog box appears.
+Use o botão de navegação para selecionar **Inglês** e clique no botão **OK**.  
+A caixa de diálogo de parâmetros do projeto aparecerá.
 
 .. image:: /intro/_images/project_params_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Project params
+    :scale: 50%
+    :align: center
+    :alt: Parâmetros do projeto
 
-Fill out the form as in the picture above, and click **OK**.
-Now you should see the project tree in the left panel.
-
+Preencha o formulário como mostrado na imagem acima e clique em **OK**.  
+Agora, você deverá ver a árvore do projeto no painel à esquerda.
 
 .. image:: /intro/_images/adm_new_project_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Project Application builder
+    :scale: 50%
+    :align: center
+    :alt: Construtor de Aplicações do Projeto
 
-Open a new page, type
+Abra uma nova página, digite
 
 .. code-block:: console
 
-	127.0.0.1:8080
+    127.0.0.1:8080
 
-in the address bar and press Enter.
-A new project appears with an empty menu.
+na barra de endereços e pressione Enter.  
+Um novo projeto aparecerá com um menu vazio.
 
 .. image:: /intro/_images/empty_project_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Empty project
+    :scale: 50%
+    :align: center
+    :alt: Projeto vazio
+

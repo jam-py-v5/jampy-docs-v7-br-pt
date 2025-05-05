@@ -1,36 +1,34 @@
-=======================================
-Tutorial. Part 2. File and image fields
-=======================================
+==============================================
+Tutorial. Parte 2. Campos de arquivo e imagem
+==============================================
 
-In this part we will demonstrate how to work with files and images in Jam.py.
+Nesta parte, vamos demonstrar como trabalhar com arquivos e imagens no Jam.py.
 
-Adding Image field
-==================
+Adicionando campo de imagem
+===========================
 
-Let's select the "Customers" catalog, Double-click it to open the
-:doc:`Item Editor Dialog </admin/items/item_editor_dialog>`
-and add an image field "Photo":
+Vamos selecionar o catálogo "Clientes", dar um duplo clique para abrir o  
+:doc:`Diálogo do Editor de Item </admin/items/item_editor_dialog>`  
+e adicionar um campo de imagem "Foto":
 
 .. image:: /intro/_images/image_field_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: image_field_jampy.png
 
-Now refresh the project page, click the Customers menu item and open the edit form.
+Agora atualize a página do projeto, clique no item de menu Clientes e abra o formulário de edição.
 
 .. image:: /intro/_images/image_project1_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: image_project1_jampy.png
 
-Double-click the image in the editing form to select an image from the Open File 
-dialog box.
+Dê um duplo clique na imagem no formulário de edição para selecionar uma imagem na caixa de diálogo Abrir Arquivo.
 
 .. image:: /intro/_images/select_image_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: select_image_jampy.png
-
 
 .. image:: /intro/_images/image_project2_jampy.png
 	:scale: 50%
@@ -39,12 +37,12 @@ dialog box.
 
 .. note::
 
-  To clear an image, hold down the Ctrl key and double-click the image.
+  Para limpar uma imagem, mantenha pressionada a tecla Ctrl e dê um duplo clique na imagem.
 
-Let's open the
-:doc:`Field Editor Dialog </admin/items/field_editor_dialog>`
-in Application Builder and set **View width** to 120 and
-**Edit width** to 314 on the **Interface** tab.
+Vamos abrir o  
+:doc:`Diálogo do Editor de Campo </admin/items/field_editor_dialog>`  
+no Application Builder e definir **Largura de visualização** como 120 e  
+**Largura de edição** como 314 na aba **Interface**.
 
 .. image:: /intro/_images/image_field2_jampy.png
 	:scale: 50%
@@ -53,88 +51,84 @@ in Application Builder and set **View width** to 120 and
 
 .. note::
 
-  You can set the image placeholder by double-clicking on it.
+  Você pode definir o espaço reservado da imagem dando um duplo clique sobre ela.
 
-In the
-:doc:`View Form Dialog </admin/items/view_form_dialog>`
-we set **Row lines** to 4 and the width of the "Photo" field to 120.  
+No  
+:doc:`Diálogo do Formulário de Visualização </admin/items/view_form_dialog>`  
+definimos **Linhas por linha** como 4 e a largura do campo "Foto" como 120.
 
 .. image:: /intro/_images/image_view_form_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: image_view_form_jampy.png
 
-Now on the project page we will have:
+Agora, na página do projeto, teremos:
 
 .. image:: /intro/_images/image_edit_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: image_edit_jampy.png
 
-
-See also
-========
+Veja também
+===========
 
 :doc:`accept string </admin/accept_string>`
 
-	
-Capturing image from camera
-===========================
 
-You can capture the image from the camera. To do so check the **Capture from camera**
-check box. In this case when the image is not set the video from camera will 
-be displayed instead of the image placeholder. 
+Captura de imagem pela câmera
+=============================
 
-Double-click the video to capture the image. To clear an image, hold down the Ctrl 
-key and double-click the image, after that the video will be displayed.
+Você pode capturar a imagem pela câmera. Para isso, marque a caixa de seleção **Capturar da câmera**.  
+Neste caso, quando a imagem não estiver definida, o vídeo da câmera será exibido no lugar do espaço reservado da imagem.
 
-The image is uploaded automaticaly to the server, providing the ".png" is added 
-on application :doc:`Parameters </admin/project/parameters>`  :doc:`Accept string </admin/accept_string>`.
+Dê um duplo clique no vídeo para capturar a imagem. Para limpar a imagem, mantenha pressionada a tecla Ctrl  
+e dê um duplo clique na imagem — depois disso, o vídeo será exibido novamente.
+
+A imagem é enviada automaticamente para o servidor, desde que a extensão ".png" esteja adicionada  
+nos :doc:`Parâmetros </admin/project/parameters>` da aplicação, conforme a :doc:`accept string </admin/accept_string>`.
 
 
-Adding file field
-=================
+Adicionando campo de arquivo
+============================
 
-Now we add a field that will store an attachment file to the "Contacts" journal.
+Agora vamos adicionar um campo que armazenará um arquivo anexo no diário "Contatos".
 
 .. image:: /intro/_images/file_field_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: file_field_jampy.png
 
-This field will be displayed in the editing form as follows:
+Este campo será exibido no formulário de edição da seguinte forma:
 
 .. image:: /intro/_images/appendix_edit_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: appendix_edit_jampy.png
-	
-The field input have three buttons on the right - to upload, to download and to 
-open a file. 	
 
-Let's open the
-:doc:`Field Editor Dialog </admin/items/field_editor_dialog>`
-in Application Builder and uncheck the **Download btn** check box and set
-**Accept** attribute to '.pdf'.
+O campo possui três botões à direita — para fazer upload, download e abrir o arquivo.
 
-Please review the :doc:`list of accepted values </admin/accept_string>`,
-before adding the values.
+Vamos abrir o  
+:doc:`Diálogo do Editor de Campo </admin/items/field_editor_dialog>`  
+no Application Builder, desmarcar a opção **Botão de download** e definir  
+o atributo **Aceitar (Accept)** como '.pdf'.
 
+Consulte a :doc:`lista de valores aceitos </admin/accept_string>`  
+antes de adicionar os valores.
 
 .. image:: /intro/_images/appendix_interface_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: appendix_interface_jampy.png
-	
-Let's	refresh the project page, open the "Contacts" edit form and upload a file
-by clicking the upload button:
+
+Vamos atualizar a página do projeto, abrir o formulário de edição de "Contatos" e fazer upload de um arquivo  
+clicando no botão de upload:
 
 .. image:: /intro/_images/appendix_select_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: appendix_select_jampy.png
 
-Now we can open a file in the browser by clicking on the open button.
+Agora podemos abrir o arquivo no navegador clicando no botão de abrir.
 
 .. image:: /intro/_images/appendix_field2_jampy.png
 	:scale: 50%
@@ -146,18 +140,16 @@ Now we can open a file in the browser by clicking on the open button.
 	:align: center
 	:alt: appendix_pdf_open_jampy.png
 
-
-
 .. note::
 
-  Files and images are stored in the *static/files* folder on the server.
+  Arquivos e imagens são armazenados na pasta *static/files* no servidor.
   
-  You can limit the size of files that can be uploaded to the server by
-  setting **Max content length** attribute in the 
-  :doc:`project parameters </admin/project/parameters>`.
+  Você pode limitar o tamanho dos arquivos que podem ser enviados ao servidor  
+  definindo o atributo **Tamanho máximo de conteúdo (Max content length)** nos  
+  :doc:`parâmetros do projeto </admin/project/parameters>`.
 
-See also
-========
+Veja também
+===========
 
 :doc:`accept string </admin/accept_string>`
 

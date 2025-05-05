@@ -1,79 +1,73 @@
-===========
-New catalog
-===========
+=============
+Novo catálogo
+=============
 
-Let's go back to the Application builder page and create a "Customers" catalog.
-A catalog corresponds to a new table in the database.
+Vamos voltar à página do Construtor de Aplicações e criar um catálogo chamado "Clientes".  
+Um catálogo corresponde a uma nova tabela no banco de dados.
 
-To do this, select the "Catalogs" group in the project tree and click the **New**
-button on the bottom right corner of the page
+Para fazer isso, selecione o grupo "Catálogos" na árvore do projeto e clique no botão **Novo** no canto inferior direito da página.
 
 .. image:: /intro/_images/catalogs_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Catalogs
+    :scale: 50%
+    :align: center
+    :alt: Catálogos
 
-In the 
-:doc:`Item Editor </admin/items/item_editor_dialog>`
-dialog that appears, fill in the caption and name of the new catalog. The caption
-is the name that will be displayed to users, and the name is the variable name that
-will be used in code (Python or JS) to refer to this catalog. The name must be a
-valid Python identifier.
+No diálogo 
+:doc:`Editor de Itens </admin/items/item_editor_dialog>`
+que aparecerá, preencha o título e o nome do novo catálogo. O título
+é o nome que será exibido para os usuários, e o nome é a variável que
+será usada no código (Python ou JS) para se referir a este catálogo. O nome deve ser um
+identificador válido do Python.
 
 .. image:: /intro/_images/customers_new_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: New customers catalog
+    :scale: 50%
+    :align: center
+    :alt: Novo catálogo de clientes
 
-Then, click the **New** button on the bottom right corner of the dialog to add a new field. The
-:doc:`Field Editor </admin/items/field_editor_dialog>`
-dialog appears. Type the caption and name of the 
-"Firstname" field, select its type (here ``TEXT`` with 30 characters)
-and click the **OK** button.
+Em seguida, clique no botão **Novo** no canto inferior direito do diálogo para adicionar um novo campo. O
+:doc:`Editor de Campos </admin/items/field_editor_dialog>`
+aparecerá. Digite o título e o nome do campo 
+"Primeiro Nome", selecione seu tipo (aqui ``TEXT`` com 30 caracteres)
+e clique no botão **OK**.
 
 .. image:: /intro/_images/firstname_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: New journal tasks
+    :scale: 50%
+    :align: center
+    :alt: Novas tarefas do diário
 
-Similarly, add the "Lastname" and "Phone" fields. When adding the "Lastname"
-field, check the **Required** attribute. This requires that the field is set
-when creating a new item.
+Da mesma forma, adicione os campos "Sobrenome" e "Telefone". Ao adicionar o campo "Sobrenome",
+marque o atributo **Obrigatório**. Isso exige que o campo seja preenchido
+ao criar um novo item.
 
 .. image:: /intro/_images/customers_fields_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Customers fields
-	
-Now, to save the changes, click the **OK** button. When saving, the Application 
-builder created the ``CRM_CUSTOMERS`` table in the ``crm.sqlite`` database:
+    :scale: 50%
+    :align: center
+    :alt: Campos de clientes
 
+Agora, para salvar as alterações, clique no botão **OK**. Ao salvar, o Construtor de Aplicações
+criará a tabela ``CRM_CUSTOMERS`` no banco de dados ``crm.sqlite``:
 
 .. image:: /intro/_images/customer_sql_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Table created
+    :scale: 50%
+    :align: center
+    :alt: Tabela criada
 
-
-Go to the Project page and make sure it is refreshed
+Vá até a página do Projeto e certifique-se de que ela foi atualizada
 
 .. code-block:: console
 
     127.0.0.1:8080
 
-
-
-Then, click the **New** button to create a new customer.
-Fill in the dialog, then click the **OK** button:
+Em seguida, clique no botão **Novo** para criar um novo cliente.
+Preencha o formulário, depois clique no botão **OK**:
 
 .. image:: /intro/_images/customers_refresh_jampy.png
-	:scale: 50%
-	:align: center
-	:alt: Customers page
+    :scale: 50%
+    :align: center
+    :alt: Página de clientes
 
+Veja também
+============
 
-See also
-========
-
-:doc:`sanitizing </admin/sanitizing>`
+:doc:`sanitização </admin/sanitizing>`
 
