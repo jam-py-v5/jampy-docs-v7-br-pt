@@ -1,113 +1,112 @@
 =============
-Lookup fields
+Campos Lookup
 =============
 
-A lookup field can display a user friendly value that is bound to another value 
-in the another table or value list. For example, the lookup field can 
-display a customer name that is bound to a respective customer ID number in 
-another item's table or list.
+Um campo lookup pode exibir um valor amigável para o usuário que está vinculado a outro valor
+em outra tabela ou lista de valores. Por exemplo, o campo lookup pode 
+exibir o nome de um cliente que está vinculado ao respectivo número de ID do cliente em 
+uma tabela ou lista de outro item.
 
-When entering a value in the lookup field the user chooses from a list of values.
-This can make data entry quicker and more accurate.
+Ao inserir um valor no campo lookup, o usuário escolhe a partir de uma lista de valores.
+Isso pode tornar a entrada de dados mais rápida e precisa.
 
-The two types of lookup fields that you can create are a lookup field, 
-based on lookup item, and a value list.
+Os dois tipos de campos lookup que você pode criar são: um campo lookup 
+baseado em item lookup e uma lista de valores.
 
-Lookup item based lookup field
-==============================
+Campo lookup baseado em item lookup
+===================================
 
-In the framework you can add a field to an item to look up information in another 
-item's table. For example in the Demo application **Albums** catalog there is the
-**Artist** lookup field.
+No framework, você pode adicionar um campo a um item para buscar informações na tabela de outro item. 
+Por exemplo, no catálogo **Álbuns** do aplicativo de demonstração existe o
+campo lookup **Artista**.
 
 .. image:: /programming/_images/albums_edit_form_jampy.png
 	:align: center
 	:alt: albums_edit_form_jampy.png
 
-To set the value of the field the user must click on the button to the right of the 
-field input and select a record from the ''Artists'' catalog that will appear.
-Then the value of this field will be the id of the record. 
-The other way to set value of the field is to use typeahead, if **Typeahead**
-flag is set in the 
-:doc:`Field Editor Dialog </admin/items/field_editor_dialog>`:
+Para definir o valor do campo, o usuário deve clicar no botão à direita do campo de entrada 
+e selecionar um registro do catálogo ''Artistas'' que será exibido.
+Então o valor desse campo será o ID do registro.  
+Outra forma de definir o valor do campo é usar a digitação antecipada (typeahead), 
+se a opção **Typeahead** estiver marcada no 
+:doc:`Diálogo do Editor de Campo </admin/items/field_editor_dialog>`:
 
 .. image:: /programming/_images/artist_field_jampy.png
 	:align: center
 	:alt: Lookup field
 
-For such fields **Lookup item** and **Lookup field** must be specified in the
-:doc:`Field Editor Dialog </admin/items/field_editor_dialog>`:
+Para tais campos, **Item Lookup** e **Campo Lookup** devem ser especificados no
+:doc:`Diálogo do Editor de Campo </admin/items/field_editor_dialog>`:
 
-The SQL query that is generated on the server, when the ``open`` method is called 
-and ``expanded`` parameter is set to true (default), uses ``JOIN`` clause to 
-get lookup values for such fields. Thus each such field has a pair of values: 
-the first value stores a reference to a record in the lookup item table (the value 
-of its primary key field), and the second value have the value of the lookup 
-field in this record.
+A consulta SQL que é gerada no servidor, quando o método ``open`` é chamado 
+e o parâmetro ``expanded`` é definido como verdadeiro (padrão), utiliza a cláusula ``JOIN`` para 
+obter os valores de lookup para tais campos. Assim, cada um desses campos tem um par de valores: 
+o primeiro valor armazena uma referência a um registro na tabela do item de lookup (o valor 
+do seu campo de chave primária), e o segundo valor contém o valor do campo lookup nesse registro.
 
-To get access to this values use the following properties of lookup fields:
+Para acessar esses valores, use as seguintes propriedades dos campos lookup:
 
 .. csv-table:: 
-   :header: Client, Server, Description
+   :header: Cliente, Servidor, Descrição
    :widths: 10, 10, 80
 
-   :doc:`value </refs/client/field/at_value>`, :doc:`value </refs/server/field/at_value>`, "A value, that is stored in the item table, that is a reference to a record in the lookup item table."
-   :doc:`lookup_value </refs/client/field/at_lookup_value>`, :doc:`lookup_value </refs/server/field/at_lookup_value>`, "A value of the lookup field in the lookup item table."
+   :doc:`value </refs/client/field/at_value>`, :doc:`value </refs/server/field/at_value>`, "Um valor, que é armazenado na tabela do item, que é uma referência a um registro na tabela do item de lookup."
+   :doc:`lookup_value </refs/client/field/at_lookup_value>`, :doc:`lookup_value </refs/server/field/at_lookup_value>`, "Um valor do campo de lookup na tabela do item de lookup."
 
-Sometimes there is a need to have two or more values from the same record in the
-lookup item table. For example, the ""Invoices" journal in Demo has several 
-lookup fields ("Customer", "Billing Address", "Billing City", and so on) 
-that have information about a customer, all stored in one record in the 
-"Customers" item table, describing that customer. In order to avoid creating 
-unnecessary fields in the "Invoices" item table, storing the same reference 
-to a record, and creating ``JOIN`` s for each such field, all lookup fields 
-except "Customers" have **Master field** value pointing to the "Customers"
-field. These fields don't have corresponding fields in the items' underlying 
-database table. Their value property is always equal to the value property of 
-the master field and the SQL query that is generated on the server, when the 
-open method is called, uses one ``JOIN`` clause for all this fields.
+Às vezes, há a necessidade de ter dois ou mais valores do mesmo registro na 
+tabela do item de lookup. Por exemplo, o diário "Faturas" no Demo tem vários 
+campos de lookup ("Cliente", "Endereço de Cobrança", "Cidade de Cobrança", e assim por diante) 
+que possuem informações sobre um cliente, todas armazenadas em um único registro na 
+tabela do item "Clientes", descrevendo esse cliente. Para evitar a criação 
+de campos desnecessários na tabela do item "Faturas", armazenando a mesma referência 
+a um registro, e criando ``JOIN`` s para cada um desses campos, todos os campos de lookup 
+exceto "Clientes" têm o valor **Campo Mestre** apontando para o campo "Clientes".
+Esses campos não têm campos correspondentes na tabela subjacente do banco de dados dos itens. 
+O valor da sua propriedade de valor é sempre igual à propriedade de valor do 
+campo mestre, e a consulta SQL gerada no servidor, quando o método 
+``open`` é chamado, utiliza uma única cláusula ``JOIN`` para todos esses campos.
 
 .. image:: /programming/_images/master_field_example_jampy.png
 	:align: center
 	:alt: Master field example
 	
-When user clicks on the button to the right of the field input or uses typeahead,
-the application creates a copy of the lookup item of the field, sets its
+Quando o usuário clica no botão à direita do campo de entrada ou usa o tipo de pesquisa (typeahead),
+o aplicativo cria uma cópia do item de lookup do campo, define o atributo
 :doc:`lookup_field </refs/client/item/at_lookup_field>`
-attribute to the field. and
-triggers 
-:doc:`on_field_select_value </refs/client/item/on_field_select_value>`
-event. Write this event handler to specify fields that will be displayed, 
-set up filters for the lookup item, before it will be opened and displayed for 
-a user to select a value for the field.
+para o campo, e
+dispara o evento 
+:doc:`on_field_select_value </refs/client/item/on_field_select_value>`.
+Escreva esse manipulador de evento para especificar os campos que serão exibidos, 
+configurar filtros para o item de lookup, antes que ele seja aberto e exibido para 
+que o usuário selecione um valor para o campo.
 
-The lookup field in the lookup item can also be a lookup field, for example:
+O campo de lookup no item de lookup também pode ser um campo de lookup, por exemplo:
 
 .. image:: /programming/_images/tracks_lookup_field_jampy.png
 	:align: center
 	:alt: tracks_lookup_field_jampy.png
 	
-To set up such a field use **Lookup field 2** and **Lookup field 3** attributes.
+Para configurar tal campo, use os atributos **Lookup field 2** e **Lookup field 3**.
 	
 
-Value list
-==========
+Lista de valores
+================
 
-Sometimes a source of a lookup field can be defined as a value list. For 
-example, a **MediaType** field in the **Tracks** catalog of the 
-:doc:`Demo project </intro/demo_project>` has a **Lookup value list** attribute set
-to the MediaTypes lookup list:
+Às vezes, a fonte de um campo de lookup pode ser definida como uma lista de valores. Por 
+exemplo, o campo **MediaType** no catálogo **Tracks** do 
+:doc:`Projeto Demo </intro/demo_project>` tem o atributo **Lookup value list** configurado 
+para a lista de lookup MediaTypes:
 
 .. image:: /programming/_images/mediatype_field_jampy.png
 	:align: center
-	:alt:  MediaType field definition
+	:alt: Definição do campo MediaType
 
-Use the :doc:`Lookup List Dialog </admin/lookup_lists>` of the task to define 
-such lookup lists.
+Use o :doc:`Lookup List Dialog </admin/lookup_lists>` da tarefa para definir 
+tais listas de lookup.
 
-See also
-========
+Veja também
+============
 
-:doc:`Lookup fields </intro/tutorial01/lookup_fields>`
+:doc:`Campos de seleção </intro/tutorial01/lookup_fields>`
 
-:doc:`Lookup lists </intro/tutorial01/lookup_list>`
+:doc:`Listas de seleção </intro/tutorial01/lookup_list>`

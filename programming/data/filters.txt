@@ -1,56 +1,52 @@
 =======
-Filters
+Filtros
 =======
 
-For each item that have access to a database table a list of filter objects can 
-be created.
+Para cada item que tem acesso a uma tabela do banco de dados, pode ser criada uma lista de objetos de filtro.
 
-To create filters use 
-an :doc:`Filters Dialog </admin/items/filters_dialog>` of the Application builder.
+Para criar filtros, utilize o 
+:doc:`Diálogo de Filtros </admin/items/filters_dialog>` do Application Builder.
 
-Filters provide a convenient way for users to visually specify parameters of the
-request made by the application to the project database
+Os filtros oferecem uma maneira conveniente para os usuários especificarem visualmente os parâmetros da solicitação feita pelo aplicativo ao banco de dados do projeto.
 
-Each filter has the following attributes:
+Cada filtro possui os seguintes atributos:
 
-* ``owner`` – an item that owners this filter,
-* ``filter_name`` — the name of the filter that can be used in programming code
-* ``filter_caption`` - the name of the filter used in the visual representation 
-  in the client application,
-* ``filter_type`` — type of the filter, see 
-  :doc:`Filtering records <filtering_records>`,
-* ``visible`` — if the value of this attribute is ``true``, a visual 
-  representation of this filter will be created by the 
-  :doc:`create_filter_inputs </refs/client/item/m_create_filter_inputs>`
-  method, when a ``filters`` option is not specified,
-* value — a value of the filter,
+* ``owner`` – item que possui este filtro,
+* ``filter_name`` — o nome do filtro que pode ser usado no código de programação,
+* ``filter_caption`` — o nome do filtro usado na representação visual 
+  no aplicativo cliente,
+* ``filter_type`` — tipo do filtro, veja 
+  :doc:`Filtrando registros <filtering_records>`,
+* ``visible`` — se o valor deste atributo for ``true``, uma representação visual deste filtro será criada pelo método 
+  :doc:`create_filter_inputs </refs/client/item/m_create_filter_inputs>`, 
+  quando a opção ``filters`` não for especificada,
+* ``value`` — valor do filtro,
 
-All filters of the item are attributes of the ``filters`` of its object.
-By using ``filter_name`` we can get access to the filter object:
+Todos os filtros do item são atributos de ``filters`` do seu objeto.
+Usando ``filter_name`` podemos acessar o objeto do filtro:
 
 .. code-block:: js
 
     invoices.filters.invoicedate1.value = new Date()
 
-Another way to get access to the filter is to use
+Outra forma de acessar o filtro é usar o método
 :doc:`filter_by_name </refs/client/item/m_filter_by_name>`
-method:
 
 .. code-block:: js
 
     invoices.filter_by_name('invoicedate').value = new Date()
 
 
-See also
-========
+Veja também
+============
 
 :doc:`Dataset <dataset>`
 
-:doc:`Filtering records <filtering_records>`
+:doc:`Filtrando registros <filtering_records>`
 
 
-Client
-------
+Cliente
+-------
 
 :doc:`filters </refs/client/item/at_filters>`
 
@@ -64,8 +60,8 @@ Client
 
 :doc:`filter_by_name </refs/client/item/m_filter_by_name>`
 
-Server
-------
+Servidor
+---------
 
 :doc:`filters </refs/server/item/at_filters>`
 

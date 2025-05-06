@@ -1,27 +1,27 @@
-=================
-Filtering records
-=================
+===================
+Filtrando registros
+===================
 
-There are three ways to define what records an item
-:doc:`dataset <dataset>`
-will get from the database table 
-when the ``open`` method is called:
+Existem três maneiras de definir quais registros o 
+:doc:`dataset <dataset>` de um item irá obter da tabela do banco de dados
+quando o método ``open`` for chamado:
 
-* to specify ``where`` parameter (option) of the ``open`` method, 
-* call the ``set_where`` method, before calling the ``open`` method,
-* or use 
-  :doc:`filters <filters>`.
-  
-When ``where`` parameter is specified, it is always used even if the ``set_where`` 
-method was called or item has filters whose values have been set.
+* especificar o parâmetro (opção) ``where`` do método ``open``, 
+* chamar o método ``set_where`` antes de chamar o método ``open``,
+* ou usar 
+  :doc:`filtros <filters>`.
 
-When ``where`` parameter is omitted the parameter passed to the ``set_where`` 
-method are used.
+Quando o parâmetro ``where`` é especificado, ele sempre será utilizado mesmo que o 
+método ``set_where`` tenha sido chamado ou que o item tenha filtros com valores definidos.
 
-For example on the client in the following code in the first call of the ``open``
-method the ``where`` option will be used to filter records, 
-in the second call the parameters passed to ``set_where`` and only the third 
-time the value of ``invoicedate1`` filter will be used
+Quando o parâmetro ``where`` é omitido, os parâmetros passados para o método ``set_where`` 
+serão utilizados.
+
+Por exemplo, no cliente, no seguinte código, na primeira chamada do método ``open`` 
+a opção ``where`` será usada para filtrar os registros, na segunda chamada os parâmetros 
+passados para ``set_where`` e apenas na terceira vez será usado o valor do filtro 
+``invoicedate1``.
+
 
 .. code-block:: js
 
@@ -42,7 +42,7 @@ time the value of ``invoicedate1`` filter will be used
     
     date = datetime.datetime.now() - datetime.timedelta(days=3*365)
 
-The same code on the server looks the following way:
+O mesmo código no servidor fica da seguinte forma:
 
 .. code-block:: py
 
@@ -62,8 +62,8 @@ The same code on the server looks the following way:
         
         invoices.open()
 
-In the framework, the following symbols and corresponding constants are defined 
-to filter records:
+No framework, os seguintes símbolos e constantes correspondentes são definidos 
+para filtrar registros:
 
 .. csv-table:: 
    :header: Filter type, Filter symbol, Constant, SQL Operator
@@ -80,33 +80,33 @@ to filter records:
    ``RANGE``, 'range', ``FILTER_RANGE``, ``BETWEEN``
    ``ISNULL``, 'isnull', ``FILTER_ISNULL``, ``IS NULL``
    ``EXACT``, 'exact', ``FILTER_EXACT``, ``=``
-   ``CONTAINS``, 'contains', ``FILTER_CONTAINS``, uses ``LIKE`` with the "%" sign to find records where field value contains a search string
-   ``STARTWITH``, 'startwith', ``FILTER_STARTWITH``, uses ``LIKE`` with the "%" sign to find records where field value starts with a search string
-   ``ENDWITH``, 'endwith', ``FILTER_ENDWITH``, uses ``LIKE`` with the "%" sign to find records where field value ends with a search string
-   ``CONTAINS ALL``, 'contains_all', ``FILTER_CONTAINS_ALL``, uses ``LIKE`` with the "%" sign to find records where field value contains all words of a search string
-  
-The ``where`` the parameter of the ``open`` method is a dictionary, whose keys 
-are the names of the fields that are followed, after double underscore, by a 
-filter symbol. For ``EQ`` filter the filtering symbol '__eq' can be omitted. 
-For example ``{'id': 100}`` is equivalent to ``{'id__eq': 100}``.
+   ``CONTAINS``, 'contains', ``FILTER_CONTAINS``, usa ``LIKE`` com o caractere "%" para encontrar registros onde o valor do campo contém a string de pesquisa
+   ``STARTWITH``, 'startwith', ``FILTER_STARTWITH``, usa ``LIKE`` com o caractere "%" para encontrar registros onde o valor do campo começa com a string de pesquisa
+   ``ENDWITH``, 'endwith', ``FILTER_ENDWITH``, usa ``LIKE`` com o caractere "%" para encontrar registros onde o valor do campo termina com a string de pesquisa
+   ``CONTAINS ALL``, 'contains_all', ``FILTER_CONTAINS_ALL``, usa ``LIKE`` com o caractere "%" para encontrar registros onde o valor do campo contém todas as palavras da string de pesquisa
+
+O parâmetro ``where`` do método ``open`` é um dicionário cujas chaves 
+são os nomes dos campos seguidos, após dois sublinhados, por um símbolo de filtro. 
+Para o filtro ``EQ``, o símbolo de filtro '__eq' pode ser omitido. 
+Por exemplo, ``{'id': 100}`` é equivalente a ``{'id__eq': 100}``.
 
 
-See also
-========
+Veja também
+============
 
 :doc:`Dataset <dataset>`
 
 :doc:`Filters <filters>`
 
-Client
-------
+Cliente
+-------
 
 :doc:`open </refs/client/item/m_open>`
 
 :doc:`set_where </refs/client/item/m_set_where>`
 
-Server
-------
+Servidor
+--------
 
 :doc:`open </refs/server/item/m_open>`
 

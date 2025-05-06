@@ -1,61 +1,55 @@
-==================
-Modifying datasets
-==================
+================================
+Modificando conjuntos de dados
+================================
 
-When an application opens an item dataset, the dataset automatically enters 
-*browse* state. Browsing enables you to view records in a dataset, but you 
-cannot edit records or insert new records. You mainly use *browse* state to 
-scroll from record to record in a dataset. 
+Quando um aplicativo abre um conjunto de dados de item, o conjunto de dados entra automaticamente 
+no estado *navegação*. A navegação permite que você visualize registros em um conjunto de dados, mas você 
+não pode editar registros ou inserir novos registros. Você usa principalmente o estado *navegação* para 
+rolar de um registro para outro em um conjunto de dados.
 
-For more information about scrolling from record to record, see 
-:doc:`Navigating datasets <navigating_datasets>`.
+Para mais informações sobre como navegar entre os registros, consulte 
+:doc:`Navegando por conjuntos de dados <navigating_datasets>`.
 
-From *browse* state all other dataset states can be set. For example, calling 
-the *insert* or *append* methods changes its state from *browse* to *insert*. 
+A partir do estado *navegação*, todos os outros estados do conjunto de dados podem ser definidos. Por exemplo, chamar 
+os métodos *insert* ou *append* altera seu estado de *navegação* para *inserir*.
 
-Two methods can return a dataset to *browse* state. ``Cancel`` ends the current 
-edit, insert, and returns a dataset to *browse* state. ``Post`` writes changes 
-to the dataset, and if successful, also returns a dataset to *browse* state. If 
-this operations fail, the current state remains unchanged.
+Dois métodos podem retornar o conjunto de dados ao estado *navegação*. ``Cancel`` termina a edição atual, inserção, 
+e retorna o conjunto de dados ao estado *navegação*. ``Post`` grava as alterações no conjunto de dados e, se bem-sucedido, 
+também retorna o conjunto de dados ao estado *navegação*. Se essa operação falhar, o estado atual permanece inalterado.
 
-
-To check an item dataset state use ``item_state`` attribute or ``is_new`` 
-``is_edited`` or ``is_changing`` methods:
+Para verificar o estado do conjunto de dados de um item, use o atributo ``item_state`` ou os métodos ``is_new``, 
+``is_edited`` ou ``is_changing``:
 
 .. csv-table:: 
-   :header: Client, Server, Description
+   :header: Cliente, Servidor, Descrição
    :widths: 10, 10, 80
 
-   :doc:`item_state </refs/client/item/at_item_state>`, :doc:`item_state </refs/server/item/at_item_state>`, "Indicates the current operating state of the item dataset."
-   :doc:`is_new </refs/client/item/m_is_new>`, :doc:`is_new </refs/server/item/m_is_new>`, "Returns true if the item dataset is in *insert* state."
-   :doc:`is_edited </refs/client/item/m_is_editing>`, :doc:`is_edited </refs/server/item/m_is_editing>`, "Returns true if the item dataset is in *edit* state."
-   :doc:`is_changing </refs/client/item/m_is_changing>`, :doc:`is_changing </refs/server/item/m_is_changing>`, "Returns true if the item dataset is in *insert* or *edit* state."   
+   :doc:`item_state </refs/client/item/at_item_state>`, :doc:`item_state </refs/server/item/at_item_state>`, "Indica o estado operacional atual do conjunto de dados do item."
+   :doc:`is_new </refs/client/item/m_is_new>`, :doc:`is_new </refs/server/item/m_is_new>`, "Retorna verdadeiro se o conjunto de dados do item estiver no estado *inserir*."
+   :doc:`is_edited </refs/client/item/m_is_editing>`, :doc:`is_edited </refs/server/item/m_is_editing>`, "Retorna verdadeiro se o conjunto de dados do item estiver no estado *editar*."
+   :doc:`is_changing </refs/client/item/m_is_changing>`, :doc:`is_changing </refs/server/item/m_is_changing>`, "Retorna verdadeiro se o conjunto de dados do item estiver nos estados *inserir* ou *editar*."
 
-You can use the following item methods to insert, update, and delete data in dataset:
-
-
-.. csv-table:: 
-   :header: Client, Server, Description
-   :widths: 20, 20, 100
-   
-   :doc:`edit </refs/client/item/m_edit>`, :doc:`edit </refs/server/item/m_edit>`, "Puts the item dataset into edit state."
-   :doc:`append </refs/client/item/m_append>`, :doc:`append </refs/server/item/m_append>`, "Appends a record to the end of the dataset, and puts the dataset in *insert* state."
-   :doc:`insert </refs/client/item/m_insert>`, :doc:`insert </refs/server/item/m_insert>`, "Inserts a record at the beginning of the dataset, and puts the dataset in *insert* state."
-   :doc:`post </refs/client/item/m_post>`, :doc:`post </refs/server/item/m_post>`, "Saves the new or altered record, and puts the dataset in *browse* state."   
-   :doc:`cancel </refs/client/item/m_cancel>`, :doc:`cancel </refs/server/item/m_cancel>`, "Cancels the current operation and puts the dataset in *browse* state."
-   :doc:`delete </refs/client/item/m_delete>`, :doc:`delete </refs/server/item/m_delete>`, "Deletes the current record and puts the dataset in *browse* state."         
-
-All changes made to the dataset are stored in memory, the item records changes 
-to change log. Thus, after all the changes have been made, they can be stored in 
-the associated database table by calling the ``apply`` method. The ``apply`` 
-method generates and executes SQL query to save changes to the database.
+Você pode usar os seguintes métodos do item para inserir, atualizar e excluir dados no conjunto de dados:
 
 .. csv-table:: 
-   :header: Client, Server, Description
+   :header: Cliente, Servidor, Descrição
    :widths: 20, 20, 100
    
-   :doc:`log_changes </refs/client/item/at_log_changes>`, :doc:`log_changes </refs/server/item/at_log_changes>`, "Indicates whether to log data changes."
-   :doc:`apply </refs/client/item/m_apply>`, :doc:`apply </refs/server/item/m_apply>`, "Sends all updated, inserted, and deleted records from the item dataset to the server for writing to the database."
+   :doc:`edit </refs/client/item/m_edit>`, :doc:`edit </refs/server/item/m_edit>`, "Coloca o conjunto de dados do item no estado de edição."
+   :doc:`append </refs/client/item/m_append>`, :doc:`append </refs/server/item/m_append>`, "Adiciona um registro ao final do conjunto de dados e coloca o conjunto de dados no estado *inserir*."
+   :doc:`insert </refs/client/item/m_insert>`, :doc:`insert </refs/server/item/m_insert>`, "Insere um registro no início do conjunto de dados e coloca o conjunto de dados no estado *inserir*."
+   :doc:`post </refs/client/item/m_post>`, :doc:`post </refs/server/item/m_post>`, "Salva o novo registro ou o registro alterado e coloca o conjunto de dados no estado *navegação*."   
+   :doc:`cancel </refs/client/item/m_cancel>`, :doc:`cancel </refs/server/item/m_cancel>`, "Cancela a operação atual e coloca o conjunto de dados no estado *navegação*."
+   :doc:`delete </refs/client/item/m_delete>`, :doc:`delete </refs/server/item/m_delete>`, "Exclui o registro atual e coloca o conjunto de dados no estado *navegação*."
+
+Todas as alterações feitas no conjunto de dados são armazenadas na memória, os registros do item são alterados no log de alterações. Assim, após todas as alterações serem feitas, elas podem ser armazenadas na tabela do banco de dados associada chamando o método ``apply``. O método ``apply`` gera e executa uma consulta SQL para salvar as alterações no banco de dados.
+
+.. csv-table:: 
+   :header: Cliente, Servidor, Descrição
+   :widths: 20, 20, 100
+   
+   :doc:`log_changes </refs/client/item/at_log_changes>`, :doc:`log_changes </refs/server/item/at_log_changes>`, "Indica se as alterações de dados devem ser registradas."
+   :doc:`apply </refs/client/item/m_apply>`, :doc:`apply </refs/server/item/m_apply>`, "Envia todos os registros atualizados, inseridos e excluídos do conjunto de dados do item para o servidor para gravação no banco de dados."
 
 
 

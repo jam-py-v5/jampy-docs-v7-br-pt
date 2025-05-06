@@ -1,53 +1,48 @@
 ======
-Fields
+Campos
 ======
 
-All items, working with database table data have a 
-:doc:`fields </refs/client/item/at_fields>`
-attribute - a list of field objects, which are used to represent fields in item's
-table records. 
+Todos os itens que trabalham com dados de tabelas do banco de dados possuem um 
+atributo :doc:`fields </refs/client/item/at_fields>` – uma lista de objetos de campo, 
+que são usados para representar os campos nos registros da tabela do item.
 
-Every field have the following attributes:
+Cada campo possui os seguintes atributos:
+
+.. csv-table:: 
+   :header: Cliente, Servidor, Descrição
+   :widths: 10, 10, 80
+
+   :doc:`owner </refs/client/field/at_owner>`, :doc:`owner </refs/server/field/at_owner>`, "O item que possui este campo."
+   :doc:`field_name </refs/client/field/at_field_name>`, :doc:`field_name </refs/server/field/at_field_name>`, "O nome do campo que será usado no código de programação para acessar o objeto do campo."   
+   :doc:`field_caption </refs/client/field/at_field_caption>`, :doc:`field_caption </refs/server/field/at_field_caption>`, "O nome do campo exibido para os usuários."   
+   :doc:`field_type </refs/client/field/at_field_type>`, :doc:`field_type </refs/server/field/at_field_type>`, "Tipo do campo, um dos seguintes valores: **text**, **integer**, **float**, **currency**, **date**, **datetime**, **boolean**, **blob**."      
+   :doc:`field_size </refs/client/field/at_field_size>`, :doc:`field_size </refs/server/field/at_field_size>`, "Tamanho do campo com tipo **text**."   
+   :doc:`required </refs/client/field/at_required>`, :doc:`required </refs/server/field/at_required>`, "Especifica se um valor não vazio é obrigatório para o campo."   
+
+Para acessar os dados do dataset do item, a classe Field possui as seguintes propriedades:
 
 .. csv-table:: 
    :header: Client, Server, Description
    :widths: 10, 10, 80
 
-   :doc:`owner </refs/client/field/at_owner>`, :doc:`owner </refs/server/field/at_owner>`, "The item that owns this field."
-   :doc:`field_name </refs/client/field/at_field_name>`, :doc:`field_name </refs/server/field/at_field_name>`, "The name of the field that will be used in programming code to get access to the field object."   
-   :doc:`field_caption </refs/client/field/at_field_caption>`, :doc:`field_caption </refs/server/field/at_field_caption>`, "The name of the field that appears to users."   
-   :doc:`field_type </refs/client/field/at_field_type>`, :doc:`field_type </refs/server/field/at_field_type>`, "Type of the field, one of the following values: **text**, **integer**, **float**, **currency**,  **date**, **datetime**, **boolean**, **blob**."      
-   :doc:`field_size </refs/client/field/at_field_size>`, :doc:`field_size </refs/server/field/at_field_size>`, "A size of the field with type **text**"   
-   :doc:`required </refs/client/field/at_required>`, :doc:`required </refs/server/field/at_required>`, "Specifies whether a nonblank value for a field is required."   
+   :doc:`value </refs/client/field/at_value>`, :doc:`value </refs/server/field/at_value>`, "Use esta propriedade para obter ou definir o valor do campo do registro atual. Ao ler, o valor é convertido para o tipo do campo. Assim, para campos dos tipos integer, float e currency, se o valor no registro da tabela do banco de dados for NULL, o valor desta propriedade será 0. Para obter o valor sem conversão, use a propriedade raw_value."
+   :doc:`text </refs/client/field/at_text>`, :doc:`text </refs/server/field/at_text>`, "Use esta propriedade para obter ou definir o valor do campo como texto."
+   :doc:`lookup_value </refs/client/field/at_lookup_value>`, :doc:`lookup_value </refs/server/field/at_lookup_value>`, "Use esta propriedade para obter ou definir o valor de pesquisa (lookup), veja :doc:`Campos de pesquisa <lookup_fields>`."
+   :doc:`lookup_text </refs/client/field/at_lookup_text>`, :doc:`lookup_text </refs/server/field/at_lookup_text>`, "Use esta propriedade para obter ou definir o valor de pesquisa do campo como texto, veja :doc:`Campos de pesquisa <lookup_fields>`."
+   :doc:`display_text </refs/client/field/at_display_text>`, :doc:`display_text </refs/server/field/at_display_text>`, "Representa o valor do campo como exibido nos controles ligados a dados. Quando o campo é um campo de pesquisa, seu valor será o de lookup_text, caso contrário será o valor da propriedade text, levando em consideração os parâmetros de localidade do projeto. Esse comportamento pode ser sobrescrito pelo manipulador de evento :doc:`on_field_get_text </refs/client/item/on_get_field_text>` do item que possui o campo."   
+   :doc:`raw_value </refs/client/field/at_raw_value>`, :doc:`raw_value </refs/server/field/at_raw_value>`, "Use esta propriedade para obter o valor do campo do registro atual exatamente como está armazenado no banco de dados. Nenhuma conversão é realizada."
 
-
-To get access to the item dataset data, the Field class have the following properties: 
-
-.. csv-table:: 
-   :header: Client, Server, Description
-   :widths: 10, 10, 80
-
-   :doc:`value </refs/client/field/at_value>`, :doc:`value </refs/server/field/at_value>`, "Use this property to get or set the field's value of the current record. When reading the value is converted to the type of the field. So for fields of type integer, float and currency, if value for this field in database table record is NULL, value of this property is 0. To get unconverted value use the raw_value property."
-   :doc:`text </refs/client/field/at_text>`, :doc:`text </refs/server/field/at_text>`, "Use this property to get or set the value of the field as text."
-   :doc:`lookup_value </refs/client/field/at_lookup_value>`, :doc:`lookup_value </refs/server/field/at_lookup_value>`, "Use this property to get or set lookup value, see :doc:`Lookup fields <lookup_fields>`."
-   :doc:`lookup_text </refs/client/field/at_lookup_text>`, :doc:`lookup_text </refs/server/field/at_lookup_text>`, "Use this property to get or set the lookup value of the field as text, see :doc:`Lookup fields <lookup_fields>`."
-   :doc:`display_text </refs/client/field/at_display_text>`, :doc:`display_text </refs/server/field/at_display_text>`, "Represents the field's value as it is displayed in data-aware controls. When the field is a lookup field it's value is the lookup_text value, otherwise it is the text value, with regard of project locale parameters. This behavior can be overridden by the :doc:`on_field_get_text </refs/client/item/on_get_field_text>` event handler of the item that owns the field."   
-   :doc:`raw_value </refs/client/field/at_raw_value>`, :doc:`raw_value </refs/server/field/at_raw_value>`, "Use this property to get field value of the current record as it is stored in database. No conversion is used."      
-
-In addition every field is an attribute of the item that owns it. So, to get 
-access to a field of an item use the following syntax: ``item.field_name``
+Além disso, cada campo é um atributo do item ao qual ele pertence. Assim, para acessar um campo de um item, utilize a seguinte sintaxe: ``item.field_name``
 
 .. code-block:: js
     
     invoices.total.value  
     
-``invoices.total`` is the reference to the
-**Total** field of the **Invoices** item and the 
-``invoices.total.value`` is the value of this field
+``invoices.total`` é a referência ao campo **Total** do item **Invoices** e 
+``invoices.total.value`` é o valor desse campo.
 
-    
-Below are the values of the attributes of the fields of the **invoices** item in the 
-:doc:`Demo project </intro/demo_project>`
+Abaixo estão os valores dos atributos dos campos do item **invoices** no 
+:doc:`Projeto de Demonstração </intro/demo_project>`
 ::
 
   customer integer 
