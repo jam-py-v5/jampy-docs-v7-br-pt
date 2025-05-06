@@ -15,4 +15,4 @@ Aqui serão explicados os conceitos básicos da programação em Jam.py.
    server/index
    reports/index
    reserved
-   form_templates
+   interface/form_templates

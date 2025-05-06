@@ -1,6 +1,6 @@
-===================
+================================
 Navegando em conjuntos de dados
-===================
+================================
 
 Cada conjunto de dados ativo tem um cursor, ou ponteiro, para a linha atual no conjunto de dados. 
 A linha atual em um conjunto de dados é aquela cujos valores podem ser manipulados pelos métodos 
@@ -64,7 +64,7 @@ no servidor:
 
 
 Formas mais rápidas de navegar no conjunto de dados
-==================================================
+====================================================
 
 Existe o método :doc:`each </refs/client/item/m_each>` no cliente que pode 
 ser usado para navegar em um conjunto de dados:

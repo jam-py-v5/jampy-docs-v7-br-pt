@@ -1,35 +1,33 @@
-==============================
-Client-side report programming
-==============================
+=====================================
+Programação de relatórios no cliente
+=====================================
 
-To print a report on the client use the 
-:doc:`print </refs/client/report/m_print>` 
-method. 
+Para imprimir um relatório no cliente, use o método 
+:doc:`print </refs/client/report/m_print>`. 
 
-As a result of calling this function, the client calls 
-:doc:`create_param_form </refs/client/report/m_create_param_form>`
-method to create a form for editing the report parameters, based on the html 
-template defined in the index.html file 
-(see :doc:`Forms </programming/interface/forms>`). 
+Como resultado da chamada dessa função, o cliente chama o método 
+:doc:`create_param_form </refs/client/report/m_create_param_form>` 
+para criar um formulário de edição dos parâmetros do relatório, com base no 
+template HTML definido no arquivo index.html 
+(consulte :doc:`Formulários </programming/interface/forms>`). 
 
-This method, after creating the form, triggers the following events:
+Esse método, após criar o formulário, dispara os seguintes eventos:
 
 * :doc:`on_param_form_created </refs/client/task/on_param_form_created>`
-  of the task.
+  da tarefa.
 
 * :doc:`on_param_form_created </refs/client/reports/on_param_form_created>`
-  of the report group that owns the report, if one is defined
+  do grupo de relatórios ao qual o relatório pertence, se definido.
 
 * :doc:`on_param_form_created </refs/client/report/on_param_form_created>`
-  of the report, if one is defined.
+  do relatório, se definido.
 
-
-The default code has the
-:doc:`on_param_form_created </refs/client/report/on_param_form_created>`
-event handler, defined for the task. In this event, the click on the **Print** 
-button is connected to the report's
-:doc:`process_report </refs/client/report/m_process_report>`
-method. 
+O código padrão possui o manipulador de evento 
+:doc:`on_param_form_created </refs/client/report/on_param_form_created>` 
+definido para a tarefa. Nesse evento, o clique no botão **Imprimir** 
+é conectado ao método 
+:doc:`process_report </refs/client/report/m_process_report>` 
+do relatório.
 
 .. code-block:: js
 
@@ -43,23 +41,24 @@ method.
         });
     }
     
-In its turn the 
+Por sua vez, o método 
 :doc:`process_report </refs/client/report/m_process_report>`    
-method triggers 
+dispara os seguintes manipuladores de evento:
 
 * :doc:`on_before_print_report </refs/client/reports/on_before_print_report>` 
-  event handler of the report group 
-  
+  do grupo de relatórios
+
 * :doc:`on_before_print_report </refs/client/report/on_before_print_report>` 
-  event handler of the report
+  do relatório
 
-In this event handlers developer can define some common (report group
-event handler) or specific (report event handler) attributes of the report.
+Nesses manipuladores de evento, o desenvolvedor pode definir alguns atributos 
+comuns (no manipulador de evento do grupo de relatórios) ou específicos 
+(no manipulador de evento do relatório) do relatório.
 
-For example, in the default code, there is the on_before_print_report event 
-handler of the report group, in which report's 
+Por exemplo, no código padrão, há um manipulador de evento 
+on_before_print_report do grupo de relatórios, no qual o atributo 
 :doc:`extension </refs/client/report/at_extension>`
-attribute is defined:
+do relatório é definido:
 
 .. code-block:: js
 
@@ -74,33 +73,34 @@ attribute is defined:
         }
     }
 
-In the following event handler, defined in the client module of the 
-**invoice** report of the Demo application, the value of the report 
-**id** parameter is set:
+No manipulador de evento a seguir, definido no módulo do cliente do relatório 
+**invoice** da aplicação Demo, o valor do parâmetro **id** do relatório é definido:
 
 .. code-block:: js
 
     function on_before_print_report(report) {
         report.id.value = report.task.invoices.id.value;
     }
-    
-After that the
+
+Após isso, o método 
 :doc:`process_report </refs/client/report/m_process_report>`    
-method sends asynchronous request to the server to generate the report
-(see :doc:`Server-side programming <server_side_programming>`). 
+envia uma solicitação assíncrona ao servidor para gerar o relatório
+(consulte :doc:`Programação do lado do servidor <server_side_programming>`). 
 
-The server returns to the method an url to a file with generated report. 
+O servidor retorna ao método uma URL para um arquivo com o relatório gerado.
 
-The method then checks if the 
-:doc:`on_open_report </refs/client/reports/on_open_report>` event handler of
-the report group is defined. If this events handler if defined calls it, 
-otherwise checks the 
-:doc:`on_open_report </refs/client/report/on_open_report>` of the report. If it 
-is defined then calls it.
+Em seguida, o método verifica se o manipulador de evento 
+:doc:`on_open_report </refs/client/reports/on_open_report>` do grupo de relatórios está definido. 
+Se esse manipulador estiver definido, ele é chamado; caso contrário, 
+verifica o 
+:doc:`on_open_report </refs/client/report/on_open_report>` do relatório. 
+Se estiver definido, ele é chamado.
 
-If none of this events are defined, it (depending on the report 
-:doc:`extension </refs/client/report/at_extension>`
-attribute) opens the report in the browser or saves it to disc.
+Se nenhum desses eventos estiver definido, o relatório é aberto no navegador ou salvo em disco, 
+dependendo do atributo 
+:doc:`extension </refs/client/report/at_extension>` 
+do relatório.
+
 
 
 

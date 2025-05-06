@@ -1,81 +1,77 @@
-=================
-Report parameters
-=================
+========================
+Parâmetros do relatório
+========================
 
-You can specify the parameters of the report. For example, the 
-**Customer purchases** report of the Demo project has three parameters.
+Você pode especificar os parâmetros do relatório. Por exemplo, o relatório 
+**Customer purchases** do projeto Demo possui três parâmetros.
 
 .. image:: /programming/_images/parameters_jampy.png
-	:align: center
-	:alt: Report parameters
+    :align: center
+    :alt: Parâmetros do relatório
 
-To add or change a report parameter click **Report params** button in the left 
-panel of the Application builder. A form will appear displaying the list of existing 
-parameters. Then click New or Edit button of the form to add or change the
-parameter.
+Para adicionar ou alterar um parâmetro do relatório, clique no botão 
+**Report params** no painel esquerdo do Application Builder. Um formulário 
+aparecerá exibindo a lista de parâmetros existentes. Em seguida, clique no 
+botão **Novo** ou **Editar** do formulário para adicionar ou alterar o parâmetro.
 
 .. image:: /programming/_images/report_param_jampy.png
-	:align: center
-	:alt: Report param
+    :align: center
+    :alt: Parâmetro do relatório
 
-The below can be specified:
+Os seguintes campos podem ser especificados:
 
-* **Caption** - the name of the parameter that appears to users
+* **Caption** - o nome do parâmetro que será exibido aos usuários
 
-* **Name** - the name of the parameter will be used in programming code to get 
-  access to the parameter object.
-  
-* **Type** - the data type of the parameter
+* **Name** - o nome do parâmetro que será utilizado no código de programação para acessar o objeto do parâmetro
 
-* **Lookup item** - the item to select the parameter value from
+* **Type** - o tipo de dado do parâmetro
 
-* **Lookup field** - the field in the lookup item
+* **Lookup item** - o item de onde o valor do parâmetro será selecionado
 
-* **Typeahead** - autocompletion/typeahead is enabled for the lookup field.
+* **Lookup field** - o campo no item de pesquisa (lookup)
 
-* **Multiple selection** - Multiple selection is enabled.
+* **Typeahead** - autocompletar/typeahead ativado para o campo de pesquisa
 
-* **Select all enabled** - Select all is enabled.
+* **Multiple selection** - permite seleção múltipla
 
-* **Lookup value list** - Lookup value list selection.
+* **Select all enabled** - permite a seleção de todos os itens
 
-* **Required** - if this checkbox is checked and **Visible** attribute is set, 
-  the client application will require a users to specify the parameter value 
-  before printing the report
+* **Lookup value list** - seleção de lista de valores de pesquisa
 
-* **Alignment** - specifies how a value of the parameter will be aligned in the 
-  input element
+* **Required** - se esta caixa de seleção estiver marcada e o atributo **Visible** 
+  estiver ativado, a aplicação cliente exigirá que os usuários informem o valor do parâmetro 
+  antes de imprimir o relatório.
 
-* **Placeholder** - use this attribute to specify the placeholder that will be 
-  displayed by the field input.
+* **Alignment** - especifica como o valor do parâmetro será alinhado no 
+  elemento de entrada.
 
-* **Help** - if any text / html-message is specified, a question mark will be 
-  displayed to the right of the input, so when the user moves the mouse pointer 
-  over this mark, a pop-up window appears displaying this message.
+* **Placeholder** - use este atributo para especificar o texto de placeholder que será 
+  exibido pelo campo de entrada.
 
-* **Visible** - the client application creates a form to specify the parameters 
-  before printing the report. If this checkbox is checked, the input element for 
-  this parameter will appear in the form
+* **Help** - se algum texto ou mensagem em HTML for especificado, um ponto de interrogação será 
+  exibido à direita da entrada. Quando o usuário mover o ponteiro do mouse sobre esse ícone, 
+  uma janela pop-up aparecerá com essa mensagem.
 
-  
-It it possible to create a lookup parameter. For example, the **Customer purchases** 
-report has a **Customer** parameter that can be selected from **Customers** 
-catalog:
+* **Visible** - a aplicação cliente cria um formulário para especificar os parâmetros 
+  antes de imprimir o relatório. Se esta caixa de seleção estiver marcada, o elemento de entrada 
+  para esse parâmetro aparecerá no formulário.
+
+É possível criar um parâmetro de pesquisa. Por exemplo, o relatório **Customer purchases** 
+tem um parâmetro **Customer** que pode ser selecionado a partir do catálogo **Customers**:
 
 .. image:: /programming/_images/lookup_param_jampy.png
-	:align: center
-	:alt: Lookup parameter
+    :align: center
+    :alt: Parâmetro de pesquisa
 
-In this case we should specify:
+Neste caso, devemos especificar:
 
-* **Lookup item** - the item to select the parameter value from
+* **Lookup item** - o item de onde o valor do parâmetro será selecionado
 
-* **Lookup field** - the field in the lookup item
+* **Lookup field** - o campo no item de pesquisa
 
-Form for setting the parameters of **Customer purchases** report is as follows:
-
+O formulário para configurar os parâmetros do relatório **Customer purchases** é o seguinte:
 
 .. image:: /programming/_images/customer_purchases_params_jampy.png
-	:align: center
-	:alt: Customer purchases parameters example
+    :align: center
+    :alt: Exemplo de parâmetros do relatório Customer purchases
 

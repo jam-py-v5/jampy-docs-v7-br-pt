@@ -1,21 +1,21 @@
 ===============
-on_apply events
+on_apply evento
 ===============
 
-When the ``apply`` method of the item is called 
-on the :doc:`client </refs/client/item/m_apply>` or the 
-:doc:`server </refs/server/item/m_apply>`, the server application, by default,
-generates SQL query, based on changes made to the dataset and executes it.
+Quando o método ``apply`` de um item é chamado 
+no :doc:`cliente </refs/client/item/m_apply>` ou no 
+:doc:`servidor </refs/server/item/m_apply>`, a aplicação do servidor, por padrão,
+gera uma consulta SQL com base nas alterações feitas no conjunto de dados e a executa.
 
-This behavior can be changed by writing an 
+Esse comportamento pode ser alterado escrevendo um manipulador de evento 
 :doc:`on_apply </refs/server/item/on_apply>`
-event handler in the item server module.
+no módulo do servidor do item.
 
-Sometimes it becomes necessary to execute some code, when changes are saved, for 
-all items. In this case the ``on_apply`` event handler of the task (declared 
-in the task server module) can be used.
+Às vezes, torna-se necessário executar algum código quando as alterações são salvas, 
+para todos os itens. Nesse caso, pode-se usar o manipulador de evento ``on_apply`` da tarefa 
+(declarado no módulo do servidor da tarefa).
 
-The following code describes how these events are handled:
+O código a seguir descreve como esses eventos são tratados:
 
 .. code-block:: py
 
@@ -30,21 +30,20 @@ The following code describes how these events are handled:
   #...
   return result
 
-It checks if the task has an ``on_apply`` event handler. If the ``on_apply`` 
-event handler is declared in the task server module, it is executed.
+Ele verifica se a tarefa possui um manipulador de evento ``on_apply``. 
+Se o manipulador de evento ``on_apply`` estiver declarado no módulo do servidor da tarefa, ele é executado.
 
-If the ``on_apply`` event handler of the task is not declared or the result 
-of the event handler returns ``None``, the method checks whether the item has an 
-:doc:`on_apply </refs/server/item/on_apply>`
-event handler. If it is declared in the item server module, it is executed.
+Se o manipulador de evento ``on_apply`` da tarefa não estiver declarado ou 
+o resultado do manipulador for ``None``, o método verifica se o item possui um 
+manipulador de evento :doc:`on_apply </refs/server/item/on_apply>`. 
+Se estiver declarado no módulo do servidor do item, ele é executado.
 
-If the result returned by the item event handler is ``None``, the 
-``apply_delta`` method of the item is called that generates SQL query,
-execute it and returns the result
+Se o resultado retornado pelo manipulador de evento do item for ``None``, 
+o método ``apply_delta`` do item é chamado, que gera a consulta SQL, a executa 
+e retorna o resultado.
 
-
-Example
+Exemplo
 =======
 
-:doc:`Here is an example how on_apply can be used </how_to/how_to_multitenancy>`
+:doc:`Aqui está um exemplo de como o on_apply pode ser usado </how_to/how_to_multitenancy>`
 

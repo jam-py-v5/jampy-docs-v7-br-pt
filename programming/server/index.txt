@@ -1,52 +1,44 @@
-=======================
-Server side programming
-=======================
+================================
+Programação do lado do servidor
+================================
 
-In most cases, the client sends a request to the server when  following methods 
-of an item are executed:
+Na maioria dos casos, o cliente envia uma solicitação ao servidor quando os seguintes métodos de um item são executados:
+
 
 * :doc:`open </refs/client/item/m_open>`
 * :doc:`apply </refs/client/item/m_apply>`
 * :doc:`print </refs/client/report/m_print>`
 * :doc:`server </refs/client/abstr_item/m_server>`
 
-In these cases the client sends to the server the 
-:doc:`ID </refs/client/abstr_item/at_id>`
-of the item's task, the
-:doc:`ID </refs/client/abstr_item/at_id>`
-of the item, the type of the request and its parameters.
 
-The server on receiving the request, based on passed IDs, finds the task 
-(it can be Project task or Application builder task) and the item on the server, 
-executes the corresponding method with passed parameters and returns the result of
-the execution to the client. The server method can trigger events that can 
-modify its default behavior.
+Nesses casos, o cliente envia ao servidor o :doc:`ID </refs/client/abstr_item/at_id>` da tarefa do item, o :doc:`ID </refs/client/abstr_item/at_id>` do item, o tipo da solicitação e seus parâmetros.
 
-Every item of the task tree have the 
-:doc:`environ </refs/server/abstr_item/at_environ>`
-and
-:doc:`session </refs/server/abstr_item/at_session>`
-attributes that store context of the current request.
+Ao receber a solicitação, o servidor, com base nos IDs passados, encontra a tarefa (pode ser uma tarefa de Projeto ou uma tarefa do Construtor de Aplicações) e o item no servidor, executa o método correspondente com os parâmetros passados e retorna o resultado da execução para o cliente. O método do servidor pode disparar eventos que podem modificar seu comportamento padrão.
 
-The most common server events are:
+Cada item da árvore de tarefas possui os atributos :doc:`ambiente </refs/server/abstr_item/at_environ>` e :doc:`sessão </refs/server/abstr_item/at_session>` que armazenam o contexto da solicitação atual.
 
-* :doc:`on_created </refs/server/task/on_created>` - The event is triggered by the task when it has just been created by the server application. It can be used to initialize the project.
 
-* :doc:`on_apply events <on_apply_events>` - These events are triggered when the ``apply`` method of the item is called on the :doc:`client </refs/client/item/m_apply>` or the :doc:`server </refs/server/item/m_apply>`
-* :doc:`on_open_events <on_open_events>` - These events are triggered when the ``open`` method of the item is called on the :doc:`client </refs/client/item/m_open>` or the :doc:`server </refs/server/item/m_open>`
 
-* :doc:`on_generate </refs/server/report/on_generate>` - "The event is triggered when the :doc:`print </refs/client/report/m_print>` method of a report is called on the client.
+Os eventos de servidor mais comuns são:
+
+* :doc:`on_created </refs/server/task/on_created>` - O evento é disparado pela tarefa quando ela acaba de ser criada pela aplicação do servidor. Pode ser usado para inicializar o projeto.
+
+* :doc:`eventos on_apply <on_apply_events>` - Esses eventos são disparados quando o método ``apply`` do item é chamado no :doc:`cliente </refs/client/item/m_apply>` ou no :doc:`servidor </refs/server/item/m_apply>`
+
+* :doc:`eventos on_open <on_open_events>` - Esses eventos são disparados quando o método ``open`` do item é chamado no :doc:`cliente </refs/client/item/m_open>` ou no :doc:`servidor </refs/server/item/m_open>`
+
+* :doc:`on_generate </refs/server/report/on_generate>` - O evento é disparado quando o método :doc:`print </refs/client/report/m_print>` de um relatório é chamado no cliente.
 
 .. note::
-    Note that the task tree on the server is immutable, you can not change the 
-    attributes of the items in the task tree.
+    Note que a árvore de tarefas no servidor é imutável, você não pode alterar os 
+    atributos dos itens na árvore de tarefas.
 
-    You must use the
+    Você deve usar o método
     :doc:`copy </refs/server/item/m_copy>`
-    method to create a copy of an item. This copy is an exact copy of an item 
-    at the time of creating of the task tree. It is not added to the 
-    :doc:`task tree </programming/task_tree>`
-    and will be destroyed by Python garbage collector when no longer needed. 
+    para criar uma cópia de um item. Essa cópia é uma réplica exata de um item 
+    no momento da criação da árvore de tarefas. Ela não é adicionada à 
+    :doc:`árvore de tarefas </programming/task_tree>`
+    e será destruída pelo coletor de lixo do Python quando não for mais necessária.
 
 .. toctree::
     :maxdepth: 1

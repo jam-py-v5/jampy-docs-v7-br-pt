@@ -1,19 +1,17 @@
-==============================
-Server-side report programming
-==============================
+=====================================
+Programação de relatórios no servidor
+=====================================
 
-When a server gets a request from a client to generate report, it first of all 
-creates a copy of the report and then this copy calls the 
-:doc:`generate </refs/server/report/m_generate>` 
-method. 
+Quando o servidor recebe uma solicitação de um cliente para gerar um relatório, ele, primeiramente, 
+cria uma cópia do relatório e então essa cópia chama o método 
+:doc:`generate </refs/server/report/m_generate>`.
 
-This method triggers the
-:doc:`on_before_generate </refs/server/report/on_before_generate>` 
-event. In this event handler developer should write a code that generates the 
-content of the report.
+Este método dispara o evento 
+:doc:`on_before_generate </refs/server/report/on_before_generate>`. 
+Neste manipulador de evento, o desenvolvedor deve escrever o código que gera o 
+conteúdo do relatório.
 
-For example for the **invoice** report of the Demo application this event is as 
-follows:
+Por exemplo, para o relatório **invoice** da aplicação Demo, este evento é o seguinte:
 
 .. code-block:: py
 
@@ -46,49 +44,47 @@ follows:
         total = invoices.total.display_text
         report.print_band('summary', locals())
     
-First, we use the
-:doc:`copy </refs/server/item/m_copy>`
-method to create a copy of the invoices journal.
+Primeiro, usamos o método 
+:doc:`copy </refs/server/item/m_copy>` 
+para criar uma cópia do diário de faturas.
 
 .. code-block:: py
 
     invoices = report.task.invoices.copy()
 
-We create the copy because multiple users can simultaneously generate the same 
-report in parallel threads.
+Criamos a cópia porque múltiplos usuários podem gerar simultaneamente o mesmo 
+relatório em threads paralelas.
 
-Then we call the set_where method of the copy:
+Em seguida, chamamos o método `set_where` da cópia:
 
 .. code-block:: py
 
     invoices.set_where(id=report.id.value)
 
-where report.id.value is report id parameter, the value of which we set in the 
-:doc:`on_before_print_report </refs/client/report/on_before_print_report>`
-event handler on the client and which is equal to the current **id** field 
-value of the **invoice** journal.
+onde `report.id.value` é o parâmetro de ID do relatório, cujo valor definimos no 
+manipulador de evento :doc:`on_before_print_report </refs/client/report/on_before_print_report>` 
+no cliente e que é igual ao valor atual do campo **id** do diário de **invoice**.
 
-Then, using the 
-:doc:`open </refs/server/item/m_open>`
-method, we obtain the records on the server. After that the 
+Depois, usando o método 
+:doc:`open </refs/server/item/m_open>`,
+obtemos os registros no servidor. Após isso, o método 
 :doc:`print_band </refs/server/report/m_print_band>`
-method is used to print title band:
+é usado para imprimir o título:
 
 .. code-block:: py
 
     report.print_band('title', locals())
 
-But before that we assign values to four local variables: customer, address, 
-city and date that correspond to programmable cells in the title band in the 
-report template.
+Mas antes disso, atribuímos valores a quatro variáveis locais: customer, address, 
+city e date, que correspondem às células programáveis na faixa de título no 
+template do relatório.
 
-Then the same way we generate detail and summary bands.
+Em seguida, da mesma forma, geramos as faixas de detalhes e resumo.
 
-When the report is generated and the value of report 
-:doc:`extension </refs/client/report/at_extension>`
-attribute, set on the client, is not equals 'pdf' the server converts the ods 
-file using **LibreOffice**.
+Quando o relatório é gerado e o valor do atributo :doc:`extension </refs/client/report/at_extension>`,
+definido no cliente, não é igual a 'pdf', o servidor converte o arquivo ods 
+usando o **LibreOffice**.
 
-Once the report is generated it is stored in a report folder of the static 
-directory and the server sends the client the report file url.
+Uma vez que o relatório é gerado, ele é armazenado na pasta de relatórios do diretório estático 
+e o servidor envia ao cliente a URL do arquivo do relatório.
 

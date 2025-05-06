@@ -67,7 +67,7 @@ Esta é a forma recomendada de instalar o Jam.py.
 
 
 .. _pip: http://www.pip-installer.org/
-.. _standalone pip installer: http://www.pip-installer.org/en/latest/installing.html#install-pip
+.. _instalador standalone do pip: http://www.pip-installer.org/en/latest/installing.html#install-pip
 
 
 Instalando uma versão oficial manualmente

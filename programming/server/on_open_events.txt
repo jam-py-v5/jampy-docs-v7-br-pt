@@ -1,11 +1,11 @@
 ==============
-on_open_events
+on_open evento
 ==============
 
-When the ``open`` method of the item is called 
-on the :doc:`client </refs/client/item/m_open>` or the 
-:doc:`server </refs/server/item/m_open>`, the server application
-executes the following code:
+Quando o método ``open`` de um item é chamado 
+no :doc:`cliente </refs/client/item/m_open>` ou no 
+:doc:`servidor </refs/server/item/m_open>`, a aplicação do servidor
+executa o seguinte código:
 
 .. code-block:: py
 
@@ -17,19 +17,20 @@ executes the following code:
   if result is None:
       result = self.execute_open(params)
 
-It checks if the task has an ``on_open`` event handler. If the ``on_open`` 
-event handler is declared in the task server module, it is executed.
+Ele verifica se a tarefa possui um manipulador de evento ``on_open``. 
+Se o manipulador de evento ``on_open`` estiver declarado no módulo do servidor da tarefa, ele é executado.
 
-If the ``on_open`` event handler of the task is not declared or the result 
-of the event handler returns ``None``, the method checks whether the item has an 
-:doc:`on_open </refs/server/item/on_open>`
-event handler. If it is declared in the item server module, it is executed.
+Se o manipulador de evento ``on_open`` da tarefa não estiver declarado ou 
+o resultado do manipulador for ``None``, o método verifica se o item possui um 
+manipulador de evento :doc:`on_open </refs/server/item/on_open>`. 
+Se estiver declarado no módulo do servidor do item, ele é executado.
 
-If the result returned by the item event handler is ``None``, the 
-``execute_open`` method of the item is called that generates SQL query,
-execute it and returns the result
+Se o resultado retornado pelo manipulador de evento do item for ``None``, 
+o método ``execute_open`` do item é chamado, que gera a consulta SQL, a executa 
+e retorna o resultado.
 
-Example
+Exemplo
 =======
 
-:doc:`Here is an example how on_open can be used </how_to/how_to_multitenancy>`
+:doc:`Aqui está um exemplo de como o on_open pode ser usado </how_to/how_to_multitenancy>`
+
