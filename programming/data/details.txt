@@ -1,22 +1,21 @@
-=======
-Details
-=======
+========
+Detalhes
+========
 
-Details are used in the framework to work with tabular data, pertaining to a record 
-in an item's table.
+Detalhes são usados no framework para trabalhar com dados tabulares, pertencentes a um registro 
+na tabela de um item.
 
-For example, the **Invoices** journal in the Demo application has the 
-**InvoiceTable** detail, which keeps a list of tracks in an customer's invoice.
+Por exemplo, o **Journal de Faturas** no aplicativo de Demonstração possui o 
+detalhe **InvoiceTable**, que mantém uma lista de itens na fatura de um cliente.
 
-Details and detail items share the same underlying database table.
- 
-To create a detail, you must first create a detail item (select Details group of 
-the project tree and click on New button) and then use the
-:doc:`Details Dialog </admin/items/details_dialog>`
-(select item in the project tree and click on Details button)
-to add a detail to an item.
+Detalhes e itens de detalhes compartilham a mesma tabela de banco de dados subjacente.
 
-For example the following code
+Para criar um detalhe, você deve primeiro criar um item de detalhe (selecione o grupo de Detalhes na árvore do projeto e clique no botão Novo) e depois usar o
+:doc:`Diálogo de Detalhes </admin/items/details_dialog>`
+(selecione o item na árvore do projeto e clique no botão Detalhes)
+para adicionar um detalhe a um item.
+
+Por exemplo, o seguinte código:
 
 .. code-block:: py
 
@@ -28,38 +27,39 @@ For example the following code
             task.invoices.invoice_table.open()	
         print task.invoices.invoice_table.record_count()
     
-will print::
+irá imprimir::
 
     2259
     6
 
-Details have two 
-:doc:`common fields <common_fields>` -
-``master_id`` and ``master_rec_id``, that are used to store information about the 
-``ID`` of the master (each item have its own unique ID) and the value of the primary 
-field of the record of its master. This way each table can be linked to several 
-items. As well as each item can have several details. To get access to details of 
-an item use its ``details`` attribute. To get access to the master of the detail 
-use its ``master`` attribute.
+Detalhes têm dois 
+:doc:`campos comuns <common_fields>` -
+``master_id`` e ``master_rec_id``, que são usados para armazenar informações sobre o 
+``ID`` do mestre (cada item tem seu próprio ID único) e o valor do campo primário 
+do registro do seu mestre. Dessa forma, cada tabela pode ser vinculada a vários 
+itens. Assim como cada item pode ter vários detalhes. Para acessar os detalhes de 
+um item, use seu atributo ``details``. Para acessar o mestre do detalhe, use seu 
+atributo ``master``.
 
-Detail class, used to create details, is an ancestor of the Item class and 
-inherits all its attributes, methods and events.
+A classe Detail, usada para criar detalhes, é um ancestral da classe Item e 
+herda todos os seus atributos, métodos e eventos.
 
 .. note::
 
-    The ``apply`` method of the Detail class does nothing. To write changes made 
-    to a detail use ``apply`` method of its master.
+    O método ``apply`` da classe Detail não faz nada. Para salvar as alterações feitas 
+    em um detalhe, use o método ``apply`` do seu mestre.
     
-    To work with a detail its muster must be active
+    Para trabalhar com um detalhe, seu mestre deve estar ativo
     
-    To make any changes to a detail its master must be in an edit or insert mode
+    Para fazer alterações em um detalhe, seu mestre deve estar em modo de edição ou 
+    inserção.
     
-Examples
+Exemplos
 ========
 
-In this example from the client module of the **Invoices** item of 
-:doc:`Demo project </intro/demo_project>`, the **Invoice_table** detail is 
-reopened every time the cursor of its master moves to another record.
+Neste exemplo do módulo cliente do item **Invoices** do 
+:doc:`Demo project </intro/demo_project>`, o detalhe **Invoice_table** é 
+reaberto toda vez que o cursor do seu mestre se move para outro registro.
 
 .. code-block:: js
 
@@ -95,7 +95,7 @@ And just as an example:
             i.post()
         invoices.apply()
     
-The same code on the client will be as follows:
+O mesmo código no cliente será o seguinte:
 
 .. code-block:: js
 

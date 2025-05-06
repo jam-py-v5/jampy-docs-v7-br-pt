@@ -181,7 +181,7 @@ o seguinte manipulador de evento no módulo do cliente do item:
 
 
 Eventos Keydown, Keyup
-=====================
+======================
 
 Esses eventos são disparados da mesma maneira que os eventos de consulta de fechamento, 
 começando pelo item, mas se o manipulador de evento retornar true, os manipuladores de evento 

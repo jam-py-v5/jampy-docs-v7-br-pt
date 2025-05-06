@@ -1,30 +1,28 @@
-==============
-Form templates
-==============
+============================
+Templates de formulário
+============================
 
-Form templates of the project are located in the 
-:doc:`templates.html <templates_html>`
-file. This file is located in the root directory of a project,
-and accessed/modified by click on ``templates [F9]`` on :doc:`Task </admin/task>`  tree.
+Os templates de formulário do projeto estão localizados no arquivo 
+:doc:`templates.html <templates_html>`. 
+Este arquivo está localizado no diretório raiz do projeto e pode ser acessado/modificado ao clicar em ``templates [F9]`` na árvore de :doc:`Tarefa </admin/task>`.
 
 .. image:: /programming/_images/forms_template_jampy.png
 	:align: center
-	:alt: Forms Template
+	:alt: Template de Formulários
 
-
-When 
+Quando o método 
 :doc:`load </refs/client/task/m_load>` 
-method is executed, the file is processed and stored in the
-:doc:`templates </refs/client/task/at_templates>`
-attribute as a JQuery object.
+é executado, o arquivo é processado e armazenado no atributo 
+:doc:`templates </refs/client/task/at_templates>` 
+como um objeto JQuery.
 
-To add a form template for an item you should add a div with the ``name-suffix``
-class in the templates div, where ``name`` is the 
-:doc:`item_name </refs/client/abstr_item/at_item_name>`
-of the item and ``suffix`` 
-is the form type: view, edit, filter, param. 
+Para adicionar um template de formulário para um item, você deve adicionar uma `div` com a classe ``name-suffix`` 
+dentro da `div` de templates, onde ``name`` é o 
+:doc:`item_name </refs/client/abstr_item/at_item_name>` 
+do item e ``suffix`` 
+é o tipo do formulário: view, edit, filter, param.
 
-For example:
+Por exemplo:
 
 .. code-block:: html
 
@@ -32,10 +30,10 @@ For example:
 		...
 	</div>
 	
-is an edit form template of the **invoices** item. 
+é um template de formulário de edição do item **invoices**.
 
-For a detail before its name there should be the name of its master, 
-separated by a hyphen: 
+Para um detalhe, antes do seu nome deve estar o nome do seu mestre, 
+separado por um hífen:
 
 .. code-block:: html
 
@@ -43,10 +41,9 @@ separated by a hyphen:
 		...
 	</div>
 	
-If an item doesn't have a form template then the form template of its owner, if 
-defined, will be used. 
+Se um item não tiver um template de formulário, então será usado o template de formulário do seu proprietário, se definido.
 
-So the template
+Assim, o template
 
 .. code-block:: html
 
@@ -54,14 +51,12 @@ So the template
 		...
 	</div>
 
-will be used to create edit forms of items that **Journals** group owns and that 
-do not have its own edit form template. 
+será usado para criar formulários de edição dos itens que pertencem ao grupo **Journals** e que não possuem seu próprio template de formulário de edição.
 
-If, after searching this way, no template was found for an item, the template
-with the ``default-suffix`` class will 
-be used to create a form. 
+Se, após essa busca, nenhum template for encontrado para o item, o template com a classe ``default-suffix`` 
+será usado para criar o formulário.
 
-So the template
+Portanto, o template
 
 .. code-block:: html
 
@@ -69,12 +64,11 @@ So the template
 		...
 	</div>
 
-will be used to create edit forms for items that have no templates defined for 
-them and their owners.
+será usado para criar formulários de edição para itens que não possuem templates definidos para si nem para seus proprietários.
 
-When a new project is created the index.html already contains such templates.
+Quando um novo projeto é criado, o arquivo index.html já contém tais templates.
 
-Below is an example of default edit form template from index.html file:
+Abaixo está um exemplo de template padrão de formulário de edição retirado do arquivo index.html:
 
 .. code-block:: html
 
@@ -88,11 +82,11 @@ Below is an example of default edit form template from index.html file:
                 <i class="bi bi-check-square"></i> OK<small class="muted">&nbsp;[Ctrl+Enter]</small>
             </button>
             <button type="button" id="cancel-btn" class="btn btn-secondary">
-                <i class="bi bi-x-square"></i> Cancel
+                <i class="bi bi-x-square"></i> Cancelar
             </button>
         </div>
     </div>
 
-There are more template examples in the
-:doc:`Form examples <form_examples>`
-section.
+Há mais exemplos de templates na seção 
+:doc:`Exemplos de formulário <form_examples>`.
+

@@ -1,20 +1,20 @@
-=============
-Form examples
-=============
+=======================
+Exemplos de formulário
+=======================
 
-Currently, the Framework uses `Bootstrap 5`_ with a simple and easy to use grid
-system that uses 12 columns and allows you to create any kind of layouts.
-It is responsive and have many components, such as dropdowns, 
-dropdown buttons, button groups, navs, navbars, tabs, breadcrumbs, badges,
-progress bars, etc.
+Atualmente, o Framework utiliza o `Bootstrap 5`_ com um sistema de grid simples e fácil de usar
+que usa 12 colunas e permite criar qualquer tipo de layout.
+É responsivo e possui muitos componentes, como dropdowns, 
+botões de dropdown, grupos de botões, navs, barras de navegação, abas, breadcrumbs, badges,
+barras de progresso, etc.
 
 .. _`Bootstrap 5`: https://getbootstrap.com/docs/5.0/
 
-Default edit form template
---------------------------
+Template padrão de formulário de edição
+---------------------------------------
 
-This template is used for creating edit forms, if an item and its owner don't 
-have their own edit form template
+Este template é usado para criar formulários de edição, caso um item e seu proprietário não 
+tenham seus próprios templates de formulário de edição.
 
 .. code-block:: html
 
@@ -27,27 +27,28 @@ have their own edit form template
                 <i class="bi bi-check-square"></i> OK<small class="muted">&nbsp;[Ctrl+Enter]</small>
             </button>
             <button type="button" id="cancel-btn" class="btn btn-secondary">
-                <i class="bi bi-x-square"></i> Cancel
+                <i class="bi bi-x-square"></i> Cancelar
             </button>
         </div>
     </div>
 
-The event below is located in the task client module and is triggered 
-for any item whose edit form has just been created. 
+O evento abaixo está localizado no módulo cliente da tarefa e é disparado 
+para qualquer item cujo formulário de edição tenha sido criado.
 
-It uses the
+Ele utiliza o método
 :doc:`create_inputs </refs/client/item/m_create_inputs>`
-method to create inputs in the div with class "edit-body". But before that it 
-checks if ``init_inputs`` function is defined in the item's client module, that 
-can be used to specify the options parameter of the method.
+para criar os campos de entrada na div com a classe "edit-body". Mas antes disso, ele 
+verifica se a função ``init_inputs`` está definida no módulo cliente do item, o que 
+pode ser usado para especificar o parâmetro de opções do método.
 
-It uses the  
+Ele usa o método  
 :doc:`create_inputs </refs/client/item/m_create_inputs>`
-method to create input controls in the div with the "edit-body" class. 
-But before that, it checks whether the init_inputs function is defined in the 
-client module of the element, which can be used to specify the method options.
+para criar os controles de entrada na div com a classe "edit-body". 
+Mas antes disso, verifica se a função ``init_inputs`` está definida no 
+módulo cliente do item, que pode ser usada para especificar as opções do método.
 
-It then assigns the jQuery events to the OK and Cancel buttons.
+Em seguida, ele atribui os eventos jQuery aos botões OK e Cancelar.
+
 
 .. code-block:: js
 
@@ -70,20 +71,19 @@ It then assigns the jQuery events to the OK and Cancel buttons.
         });
     }
 
-The edit form for **Albums** catalog looks as follows: 
+O formulário de edição para o catálogo **Álbuns** é o seguinte:
 
 .. image:: /programming/_images/default_edit_form_template_jampy.png
 	:align: center
-	:alt: Default edit form template
+	:alt: Template padrão de formulário de edição
 
 .. note::
-    
-    If there are no buttons with the corresponding ids, 
-    the code above does not generate exceptions.
 
-    If you want to overwrite JQuery events for buttons declared in the client 
-    module of the task, in the corresponding event of the client module of the 
-    item, you can do this using the jQuery ``off`` method:
+    Se não houver botões com os ids correspondentes, 
+    o código acima não gera exceções.
+
+    Se você quiser sobrescrever os eventos jQuery para os botões declarados no módulo cliente da tarefa,
+    no evento correspondente do módulo cliente do item, você pode fazer isso usando o método jQuery ``off``:
 
     .. code-block:: js
     
@@ -91,13 +91,15 @@ The edit form for **Albums** catalog looks as follows:
             .off('click.task')
             .on('click', function() { some_other_function(item) });    
 
-    If there is no corresponding container in the form, the ``create_inputs`` 
-    method does nothing.
+    Se não houver o contêiner correspondente no formulário, o método ``create_inputs`` 
+    não fará nada.
 
-Edit form template with tabs
-----------------------------
 
-This example uses the Bootstrap tabs:
+
+Template de formulário de edição com abas
+-----------------------------------------
+
+Este exemplo usa as abas do Bootstrap:
 
 .. code-block:: html
 
@@ -127,8 +129,8 @@ This example uses the Bootstrap tabs:
         </div>
     </div>
 
-The following event handler is declared in the **Customers** item client module.
-It creates input controls for panes, corresponding to tabs: 
+O seguinte manipulador de eventos é declarado no módulo cliente do item **Clientes**.
+Ele cria controles de entrada para os painéis, correspondentes às abas:
 
 .. code-block:: js
 
@@ -153,10 +155,10 @@ It creates input controls for panes, corresponding to tabs:
 	:alt: Edit form template with tabs
 
 
-Edit form template using grid layout
-------------------------------------
+Template de formulário de edição usando layout de grid
+------------------------------------------------------
 
-This example uses the Bootstrap grid system:
+Este exemplo usa o sistema de grid do Bootstrap:
 
 .. code-block:: html
 
@@ -200,27 +202,28 @@ This example uses the Bootstrap grid system:
 	:align: center
 	:alt: Edit form template using grid layout
 
-Catalogs view form template
------------------------------------
 
-In this example there is a div with class "form-header". 
 
-The element with id "form-title" is used in the 
+Template de formulário de visualização de catálogos
+---------------------------------------------------
+
+Neste exemplo, há uma div com a classe "form-header".
+
+O elemento com o id "form-title" é usado no 
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-method of the task to display the caption of an item and assign to it a JQuery 
-onclick event to execute view method to recreate the view form.
+método da tarefa para exibir o título de um item e atribuir a ele um evento JQuery 
+onclick para executar o método de visualização e recriar o formulário de visualização.
 
-The elements with id "selected-div" and "search-form" are used in the
-:doc:`on_view_form_created </refs/client/group/on_view_form_created>` of the
-catalogs group to display current value of a lookup field when the right button
-is clicked to select a value and to implement search functionality of catalogs
-correspondingly
+Os elementos com os ids "selected-div" e "search-form" são usados no
+:doc:`on_view_form_created </refs/client/group/on_view_form_created>` do
+grupo de catálogos para exibir o valor atual de um campo de pesquisa quando o botão direito
+é clicado para selecionar um valor e para implementar a funcionalidade de pesquisa de catálogos
+respectivamente.
 
-The div with class "view-table" is used in the 
+A div com a classe "view-table" é usada no 
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-event handler of the task to create a table to display item's data by using
-:doc:`create_table </refs/client/item/m_create_table>` 
-method:
+manipulador de eventos da tarefa para criar uma tabela para exibir os dados do item usando o
+método :doc:`create_table </refs/client/item/m_create_table>`:
 
 .. code-block:: js
 
@@ -232,12 +235,12 @@ method:
         item.open(true);
     }
 
-The div with id "report-btn"  is used in the 
+A div com o id "report-btn" é usada no 
 :doc:`on_view_form_created </refs/client/task/on_view_form_created>`
-event handler of the task to fill dropdown button menu items with reports defined
-in the 
-:doc:`Reports Dialog </admin/items/reports_dialog>`
-of the item (if they exist).
+manipulador de eventos da tarefa para preencher os itens do menu do botão dropdown com relatórios definidos
+no :doc:`Reports Dialog </admin/items/reports_dialog>`
+do item (se existirem).
+
 
 .. code-block:: html
 
@@ -287,12 +290,17 @@ of the item (if they exist).
 	:align: center
 	:alt: Catalogs view form template
 
-View form template with buttons at the top
-------------------------------------------
 
-In this example the form footer div is removed and buttons are placed to the
-form header div. The **Actions** dropdown button is created. The code is the same
-as in previous example.
+
+
+
+Template de formulário de visualização com botões no topo
+---------------------------------------------------------
+
+Neste exemplo, a div do rodapé do formulário é removida e os botões são colocados na
+div do cabeçalho do formulário. O botão dropdown **Ações** é criado. O código é o mesmo
+do exemplo anterior.
+
 
 .. code-block:: html
 
@@ -328,15 +336,17 @@ as in previous example.
 .. image:: /programming/_images/view_template_btns_top_jampy.png
 	:align: center
 	:alt: View form template with buttons at the top
-	
-View form template with detail
-------------------------------
 
-In this example the div with class "view-table" is removed and added two
-divs "view-master" and "view-detail" tables for master and detail items
-are created in the 
+	
+Template de formulário de visualização com detalhes
+---------------------------------------------------
+
+Neste exemplo, a div com a classe "view-table" é removida e adicionadas duas
+divs "view-master" e "view-detail", onde tabelas para os itens mestre e detalhe
+são criadas no 
 :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-event handler declared in the client module of **Invoices** journal:
+manipulador de eventos declarado no módulo cliente do diário **Faturas**:
+
 
 .. code-block:: js
 

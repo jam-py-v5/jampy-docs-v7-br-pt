@@ -1,15 +1,15 @@
-========================
-Initializing application
-========================
+==========================
+Inicializando a aplicação
+==========================
 
-The
+O evento
 :doc:`on_page_loaded </refs/client/task/on_page_loaded>`
-event is the first event triggered by an application on the client.
+é o primeiro evento acionado por uma aplicação no cliente.
 
-The new project uses 
+O novo projeto utiliza o manipulador de evento
 :doc:`on_page_loaded </refs/client/task/on_page_loaded>`
-event handler to dynamically build the application's main menu and attach the
-on click event handler to menu items using JQuery.
+para construir dinamicamente o menu principal da aplicação e anexar o manipulador
+do evento de clique aos itens do menu utilizando JQuery.
 
 .. code-block:: js
 
@@ -43,8 +43,8 @@ on click event handler to menu items using JQuery.
         });
 
 
-This event handler uses JQuery to select elements from the 
-:doc:`index.html <index_html>` to set their attributes and assign events. 
+Este manipulador de evento utiliza JQuery para selecionar elementos do 
+:doc:`index.html <index_html>` para definir seus atributos e atribuir eventos.
 
 .. code-block:: html
 
@@ -70,6 +70,7 @@ This event handler uses JQuery to select elements from the
         </div>
 
 
-Finally, the 
+Por fim, o método 
 :doc:`create_menu </refs/client/task/m_create_menu>`
-method of the task is called to dynamically create the main project menu.
+da tarefa é chamado para criar dinamicamente o menu principal do projeto.
+

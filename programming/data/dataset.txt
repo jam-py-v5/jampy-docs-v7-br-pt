@@ -2,40 +2,40 @@
 Dataset
 =======
 
-Jam.py framework uses a dataset concept that is very close to 
-datasets of `Embarcadero Delphi`_.
+O framework Jam.py usa o conceito de dataset que é muito próximo dos 
+datasets do `Embarcadero Delphi`_.
 
 .. _Embarcadero Delphi: https://en.wikipedia.org/wiki/Delphi_(programming_language)
 
 .. note::
 
-    There are other ways to read and modify the database data. You can use the
-    :doc:`connect </refs/server/task/m_connect>` 
-    method of the task to get a connection from the connection pool and use 
-    the connection to get access to the database using Python Database API.
+    Existem outras formas de ler e modificar os dados do banco de dados. Você pode usar o
+    método :doc:`connect </refs/server/task/m_connect>` 
+    da tarefa para obter uma conexão do pool de conexões e usar 
+    a conexão para acessar o banco de dados utilizando a API de Banco de Dados em Python.
     
 
-All items with ``item_type`` "item" or "table" as well as their details (see
-:doc:`Task tree </programming/task_tree>`)
-can access data from associated tables from the project database and write 
-changes to it. They all are objects of 
-the Item class
+Todos os itens com ``item_type`` "item" ou "table", assim como seus detalhes (veja
+:doc:`Árvore de tarefas </programming/task_tree>`)
+podem acessar dados das tabelas associadas do banco de dados do projeto e gravar 
+alterações nelas. Todos são objetos da 
+classe Item
 
-* :doc:`Item class </refs/client/item_api>` (on the client)
-* :doc:`Item class </refs/server/item_api>` (on the server)
+* :doc:`Classe Item </refs/client/item_api>` (no cliente)
+* :doc:`Classe Item </refs/server/item_api>` (no servidor)
 
-Both of these classes have the same attributes, methods, and events associated 
-with the data handling.
+Ambas as classes possuem os mesmos atributos, métodos e eventos associados 
+ao tratamento de dados.
 
-To get a dataset (a set of records) from the project dataset table, use the open
-method. This method, based on parameters, generates an SQL query to get a 
+Para obter um dataset (um conjunto de registros) da tabela de datasets do projeto, use o método open.
+Este método, baseado nos parâmetros, gera uma consulta SQL para obter um 
 dataset.
 
-After dataset is opened, the application can navigate it, change its records or 
-insert new ones and write changes to the item's database table.
+Após o dataset ser aberto, a aplicação pode navegar por ele, alterar seus registros ou 
+inserir novos e gravar as alterações na tabela de banco de dados do item.
 
-For example, the following functions will set *support_rep_id* field values to
-the values of the *id* field on the client and server respectively:
+Por exemplo, as funções abaixo irão definir os valores do campo *support_rep_id* para
+os valores do campo *id* no cliente e servidor, respectivamente:
 
 .. code-block:: js
 
@@ -61,18 +61,18 @@ the values of the *id* field on the client and server respectively:
             customers.next()
         customers.apply();
 
-These functions get the **customers** item as a parameter. Then the *open* 
-method is used to get a list of records from the customers table and each 
-record is modified. In the end the changes are saved in the database table, using
-the apply method (see
-:doc:`Modifying datasets <modifying_datasets>`
+Essas funções recebem o item **customers** como parâmetro. Em seguida, o método *open* 
+é usado para obter uma lista de registros da tabela de clientes e cada 
+registro é modificado. No final, as alterações são salvas na tabela do banco de dados, usando
+o método apply (veja
+:doc:`Modificando datasets <modifying_datasets>`
 ).
 
 .. note::
 
-    There is a shorter way to navigate a dataset (see 
-    :doc:`Navigating datasets <navigating_datasets>`
-    ). For example, in python, the following loops are equivalent:
+    Existe uma forma mais curta de navegar em um dataset (veja 
+    :doc:`Navegando em datasets <navigating_datasets>`
+    ). Por exemplo, em Python, os seguintes loops são equivalentes:
     
     .. code-block:: py
     
@@ -86,8 +86,9 @@ the apply method (see
 Videos
 ======
 
-`Datasets`_ and `Datasets Part 2`_ demonstrate almost all methods of working with 
-datasets on specific examples
+`Datasets`_ and `Datasets Part 2`_ demonstram quase todos os métodos de trabalho com 
+datasets em exemplos específicos.
+
 
 .. _`Datasets`: https://youtu.be/gHTYj7h9ljI
 .. _`Datasets Part 2`: https://youtu.be/1bUGmgBfrNw

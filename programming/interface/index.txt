@@ -1,6 +1,6 @@
-=======================
-Client side programming
-=======================
+===============================
+Programação do lado do cliente
+===============================
 
 .. toctree::
     :maxdepth: 1
