@@ -1,5 +1,6 @@
 conf.py
 build/
 _build/
+_build
 html/
 __pycache__/
