@@ -1,6 +1,6 @@
-=====================
+======================
 Programação em Jam.py
-=====================
+======================
 
 Aqui serão explicados os conceitos básicos da programação em Jam.py.
 
