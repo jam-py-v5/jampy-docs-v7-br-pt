@@ -6,19 +6,18 @@ Você pode usar o Jam.py com um banco de dados existente, desde que seja suporta
 
 * Crie um novo projeto com o banco de dados existente.
 
-* Se você quiser importar tabelas nos grupos *catalogs* ou *journals*, exclua os
-  :doc:`Campos comuns </programming/data/common_fields>`:
 
-  Selecione o nó *Groups* na árvore do projeto, clique duas vezes no grupo correspondente e exclua
-  os campos comuns.
- 
-  Ou crie novos grupos vazios.
-  
 * Select Project node and click Database button. Set 
   :doc:`DB manual mode </admin/project/database>`
   to true.
 
 * Select group you want to import a table to and click Import button. 
+
+.. image:: _images/Import_tables_jampy.png
+	:align: center
+	:alt: import_tables_jampy.png
+
+
 
 * In the form that will appear dbl click on the table to import it.
 
