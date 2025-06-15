@@ -53,10 +53,10 @@ The ``apply`` method
 Parameters
 ----------
 
-* ``connection`` - if this parameter is specified the appication uses it to 
+* ``connection`` - if this parameter is specified the application uses it to 
   execute sql query that it generates (it doesn't commit changes and doesn't
   close the connection), otherwise it procures a connection from the task connection 
-  pool that will be returned to the pool after changes are commited.
+  pool that will be returned to the pool after changes are committed.
 
 * ``params`` - use the parameter to pass some user defined options to be used in
   the 

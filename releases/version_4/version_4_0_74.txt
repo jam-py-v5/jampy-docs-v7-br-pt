@@ -12,7 +12,7 @@ Jam.py:
   contain any of field of default order in the
   :doc:`open </refs/server/item/m_open>` method fixed
 
-* The exception handling of errors occuring in the code, when inplace editor 
+* The exception handling of errors occurring in the code, when inplace editor 
   is used reworked so developer can find the reson of an error
 
 Administrator:

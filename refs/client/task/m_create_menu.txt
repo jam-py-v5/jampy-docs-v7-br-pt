@@ -49,7 +49,7 @@ The following parameters could be passed to the method:
   
   * ``create_single_group`` - if it is true and only one group in the task tree
     has items the menu item for the group will be created that have a drop down 
-    menu for group items, otherwise the menuitems for each item will be created, 
+    menu for group items, otherwise the menu items for each item will be created, 
     the default value is ``false``
 
   * ``splash_screen`` - an html that will be displayed in the forms_container when

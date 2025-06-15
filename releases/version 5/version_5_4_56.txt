@@ -4,7 +4,7 @@ Version 5.4.56
 
 Library:
 
-* :doc:`Record locking </admin/record_locking>` is avaliable
+* :doc:`Record locking </admin/record_locking>` is available
 
 * task creation in wsgi.py modified to avoid 'project have not been created yet'
   message

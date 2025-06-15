@@ -68,7 +68,7 @@ raise the exception if such user exists, otherwise we generate hash using the
 method of the task and set the password value to None.
 
 In the client module we defined the following on_field_get_text event handler.
-It displays '**********' string insted of the password.
+It displays '**********' string instead of the password.
 
 .. code-block:: js
 

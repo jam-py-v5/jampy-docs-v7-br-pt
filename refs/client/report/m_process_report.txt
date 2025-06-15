@@ -20,7 +20,7 @@ report file that the server returns to the client and opens or saves it.
 
 It is called by the
 :doc:`print <m_print>`
-method direclly, if its ``create_form`` parameter equals false and there are no 
+method directly, if its ``create_form`` parameter equals false and there are no 
 visible parameters. If there are visible parameters, the 
 :doc:`print <m_print>` method creates a form to specify parameter values and the 
 form should call it (for example, by some button onclick event ).

@@ -24,7 +24,7 @@ until it is released.
 
 ``lock_name`` parameter is the name of the lock. It must be unic in the 
 application. The filelock library creates a file in the *locks* folder with 
-this name and *.lock* extention that it uses to implement the lock.
+this name and *.lock* extension that it uses to implement the lock.
 
 ``timeout`` parameter - if the lock cannot be acquired within timeout seconds, a 
 Timeout exception is raised.

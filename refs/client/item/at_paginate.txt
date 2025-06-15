@@ -13,7 +13,7 @@ paginate
 Description
 ===========
 
-The ``paginate`` attribute determines the behavior of a table created by the
+The ``paginate`` attribute determines the behaviour of a table created by the
 :doc:`create_table <m_create_table>`
 method
 

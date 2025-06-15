@@ -22,7 +22,7 @@ The ``tab_name`` is the name of the tab.
 Use can use the ``options`` to specify optional parameters. It is the object that
 can have the following attributes:
 
-* ``tab_id`` - a unique string identifing the tab
+* ``tab_id`` - a unique string identifying the tab
 * ``show_close_btn`` - if it is set to ``true`` the close tab button will appear 
   that can be used to close the tab
 * ``set_active`` - if it is set to ``true`` the new tab will became active

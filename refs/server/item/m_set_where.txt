@@ -30,7 +30,7 @@ method on the client does or as keyworded arguments
 Example
 =======
 
-The result of the execution of following code snippets wil be the same:
+The result of the execution of following code snippets will be the same:
 
 .. code-block:: py
 

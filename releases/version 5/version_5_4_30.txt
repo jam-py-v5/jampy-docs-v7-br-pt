@@ -18,11 +18,11 @@ Version 5.4.30
   to create_view_tables method of Item class in jam.js module
 
 * table_container_class and detail_container_class attributes added to items view_options to enable 
-  developer to change in on_view_form_created event hander of item
+  developer to change in on_view_form_created event handler of item
   
 * inputs_container_class and detail_container_class attributes added to items edit_options to enable 
-  developer to change in on_увше_form_created event hander of item
+  developer to change in on_увше_form_created event handler of item
 
-* In jam.css and jam12.css fixed the btn groups left magrin in form-header and form-footer class
+* In jam.css and jam12.css fixed the btn groups left margin in form-header and form-footer class
 
 * Some minor bugs fixed 

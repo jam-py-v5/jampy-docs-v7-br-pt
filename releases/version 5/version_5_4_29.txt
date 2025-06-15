@@ -17,7 +17,7 @@ Library:
 
 * minor bugs fixed
 
-Documetation:
+Documentation:
 
 * :doc:`How can I perform calculations in the background </how_to/how_to_calculations_in_the_background>`
 

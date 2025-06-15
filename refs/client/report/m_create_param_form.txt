@@ -49,7 +49,7 @@ Triggers the
 of the report, if one is defined.
 
 Shows the form. Before showing the form the method applies 
-options specidied in the 
+options specified in the 
 :doc:`param_options <at_param_options>`
 attribute.
 

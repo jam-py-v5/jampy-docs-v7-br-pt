@@ -10,7 +10,7 @@ Library:
 
 * Search reworked
 
-* Field Dialogs - you can spesify default values for DATE, DATETIME, BOOLEAN 
+* Field Dialogs - you can specify default values for DATE, DATETIME, BOOLEAN 
   fields and for lookup fields that are based on lookup lists. 
   Theses default values are assigned to fields when append or insert methods of 
   element are called on the client or server. These default values are not 
@@ -21,7 +21,7 @@ Library:
 * add_view_button, add_edit_button methods added
 
 * When user tries to close or reload page and there is an item that is being 
-  edited and its data has been modified the applcation warns user about it.
+  edited and its data has been modified the application warns user about it.
 
 * A lot of miscellaneous bug fixed
 

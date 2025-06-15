@@ -14,7 +14,7 @@ Admin:
 
 Demo:
 
-* For Customers item email sending functionlally is added. It demonstrates the use
+* For Customers item email sending functionally is added. It demonstrates the use
   of 
   :doc:`server </refs/client/abstr_item/m_server>` 
   method to execute script defined in the server module from client module, 

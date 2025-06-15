@@ -6,7 +6,7 @@ Version 5.4.31
 
 * German translation updated.
 
-* Bug when Dashbord are opened fixed in Demo.
+* Bug when Dashboard are opened fixed in Demo.
 
 * Users item added to demo.
 

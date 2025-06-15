@@ -12,7 +12,7 @@ Description
 ===========
 
 Use ``create_filter_inputs`` to create data-aware visual controls (inputs, 
-cheboxes) for editing 
+checkboxes) for editing 
 :doc:`filters <at_filters>`
 of an item.
 

@@ -24,7 +24,7 @@ Demo application:
 
 * Filter text bug in demo application fixed.
 
-* Selection of search field for catalogs in demo applcation is added.
+* Selection of search field for catalogs in demo application is added.
 
 * Multiple record selection in invoices journal in demo application is added 
   (used when delete button is clicked)

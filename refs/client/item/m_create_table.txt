@@ -14,7 +14,7 @@ Description
 Use ``create_table`` method to create a table that displays records of 
 the item dataset.
 
-The behavior of the table is determined by the 
+The behaviour of the table is determined by the 
 :doc:`paginate <at_paginate>`
 attribute of the item. 
 

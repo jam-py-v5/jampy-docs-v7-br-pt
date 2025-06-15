@@ -24,7 +24,7 @@ If ``container`` parameter (Jquery object of the DOM element) is specified the
 view form html template is inserted in the container.
 
 If the :doc:`init_tabs </refs/client/task/m_init_tabs>` method of the task is 
-called for this conainer the tab is created for this form.
+called for this container the tab is created for this form.
 
 After that it calls the
 :doc:`create_view_form <m_create_view_form>`
