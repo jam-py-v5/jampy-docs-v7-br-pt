@@ -65,7 +65,7 @@ Em seguida será exibido o diálogo de novo projeto. Preencha os seguintes campo
 * **Tipo de BD** – selecione um tipo de banco de dados. Se o banco de dados não for Sqlite,  
   ele deve ser criado previamente e seus atributos devem ser inseridos nos  
   campos apropriados do formulário.  
-  Para ver exemplos de configuração de banco de dados, :doc:`acesse o </admin/project/database>`.
+  Para ver exemplos de configuração de banco de dados, :doc:`acesse </admin/project/database>`.
 
 .. image:: _images/project_params_jampy.png
     :align: center
@@ -111,11 +111,11 @@ Exemplos de configurações de banco de dados
     
 .. note::
 
-    Para um banco de dados **SQLite**, quando um campo de item é excluído ou renomeado, ou uma chave estrangeira é criada, o  
+    Para o banco de dados **SQLite**, quando um campo de item é excluído ou renomeado, ou uma chave estrangeira é criada, o  
     :doc:`Construtor de Aplicações </admin/index>`  
     cria uma nova tabela e copia os registros da antiga para ela.
 
-Para banco de dados **SQLite**, o Jam.py não oferece suporte à importação de metadados em um 
+Para o banco de dados **SQLite**, o Jam.py não oferece suporte à importação de metadados em um 
 projeto existente (um projeto com tabelas já criadas no banco de dados).  
 Você só pode importar metadados em um projeto novo.
 

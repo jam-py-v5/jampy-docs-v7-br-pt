@@ -1,6 +1,6 @@
-=============
-Novo catálogo
-=============
+===================================
+Novo Cadastro (Catalogs, no inglês)
+===================================
 
 Vamos voltar à página do Construtor de Aplicações e criar um catálogo chamado "Clientes".  
 Um catálogo corresponde a uma nova tabela no banco de dados.

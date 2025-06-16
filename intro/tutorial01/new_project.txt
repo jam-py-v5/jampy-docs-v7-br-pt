@@ -31,7 +31,7 @@ para abrir o Construtor de Aplicações. Você deverá ver o diálogo de seleç�
     :align: center
     :alt: Selecione o idioma
 
-Use o botão de navegação para selecionar **Inglês** e clique no botão **OK**.  
+Use o botão de navegação para selecionar **Inglês**, ou a língua de sua preferência, e clique no botão **OK**.  
 A caixa de diálogo de parâmetros do projeto aparecerá.
 
 .. image:: /intro/_images/project_params_jampy.png
