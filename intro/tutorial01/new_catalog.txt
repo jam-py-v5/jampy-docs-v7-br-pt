@@ -2,10 +2,10 @@
 Novo Cadastro (Catalogs, no inglês)
 ===================================
 
-Vamos voltar à página do Construtor de Aplicações e criar um catálogo chamado "Clientes".  
-Um catálogo corresponde a uma nova tabela no banco de dados.
+Vamos voltar à página do Construtor de Aplicações e criar um Cadastro chamado "Clientes".  
+Um Cadastro corresponde a uma nova tabela no banco de dados.
 
-Para fazer isso, selecione o grupo "Catálogos" na árvore do projeto e clique no botão **Novo** no canto inferior direito da página.
+Para fazer isso, selecione o grupo "Catalogs" na árvore do projeto e clique no botão **Novo** no canto inferior direito da página.
 
 .. image:: /intro/_images/catalogs_jampy.png
     :scale: 50%
@@ -14,9 +14,9 @@ Para fazer isso, selecione o grupo "Catálogos" na árvore do projeto e clique n
 
 No diálogo 
 :doc:`Editor de Itens </admin/items/item_editor_dialog>`
-que aparecerá, preencha o título e o nome do novo catálogo. O título
+que aparecerá, preencha o título e o nome do novo Cadastro. O título
 é o nome que será exibido para os usuários, e o nome é a variável que
-será usada no código (Python ou JS) para se referir a este catálogo. O nome deve ser um
+será usada no código (Python ou JS) para se referir a este Cadastro. O nome deve ser um
 identificador válido do Python.
 
 .. image:: /intro/_images/customers_new_jampy.png

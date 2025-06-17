@@ -7,7 +7,7 @@ Agora vamos criar uma
 "Status". As listas de seleção são usadas para criar campos do tipo "dropdown", com um conjunto
 limitado de valores possíveis.
 
-Selecione o nó "Tarefa" na árvore do projeto e clique no botão **Listas de seleção**.
+Selecione o nó "Tarefa" na árvore do projeto e clique no botão **Listas de seleção** (Lookup Lists).
 
 .. image:: /intro/_images/lookup_lists_jampy.png
 	:scale: 50%
@@ -22,7 +22,7 @@ Especifique o nome da nova lista de seleção e adicione uma lista de pares inte
 	:align: center
 	:alt: Entradas da lista de seleção
 
-Salve as Listas de Seleção com o botão **OK**, depois edite o diário "Contatos"
+Salve as Listas de Seleção com o botão **OK**, depois edite o registro "Contatos"
 para adicionar o novo campo "Status".
 
 .. image:: /intro/_images/status_field_jampy.png

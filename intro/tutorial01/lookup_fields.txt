@@ -2,10 +2,10 @@
 Campos de seleção
 ==================
 
-Agora, vamos criar o diário "Contatos" e usar campos de seleção para conectar contatos aos clientes. Campos de seleção permitem que um elemento de um item (ou seja, catálogo ou diário) referencie um elemento de outro item.
+Agora, vamos criar o registro "Contatos" e usar campos de seleção (Lookup) para conectar contatos aos clientes. Campos de seleção (Lookup) permitem que um elemento de um item (ou seja, Cadastro ou Registro) referencie um elemento de outro item.
 
-Selecione o grupo "Diários" na árvore de tarefas do projeto e adicione um novo diário 
-da mesma forma que criamos o catálogo "Clientes". Diários, assim como catálogos, 
+Selecione o grupo "Journals" (registros) na árvore de tarefas do projeto e adicione um novo registro (Journal) 
+da mesma forma que criamos o cadastro "Clientes". Registros, assim como cadastros, 
 correspondem a diferentes tabelas no banco de dados. Veja este :doc:`link </faq/faq_catalogs_vs_journals>` para mais informações.
 
 Primeiro, adicione um campo "Data do contato" do tipo ``DATETIME``,
@@ -13,7 +13,7 @@ e um campo "Observações" do tipo ``TEXT``.
 
 Depois, adicione o
 :doc:`campo de seleção </programming/data/lookup_fields>`
-"Cliente", que armazenará uma referência a um registro no catálogo "Clientes".
+"Cliente", que armazenará uma referência a um registro no cadastro "Clientes".
 
 .. image:: /intro/_images/contacs_cutomer_fld_jampy.png
 	:scale: 50%
@@ -68,7 +68,7 @@ Clique no botão **OK** para salvar o item "Contatos".
 
 Como você pode ver, não há campos "NOME" e "TELEFONE" na tabela ``CRM_CONTACTS``.  
 Isso ocorre porque definimos o atributo **Campo mestre** desses campos como "Cliente".  
-O campo "Cliente" armazenará uma referência a um registro no catálogo "Clientes",  
+O campo "Cliente" armazenará uma referência a um registro no registro "Clientes",  
 e esse registro conterá os campos "Nome" e "Telefone".
 
 Atualize a página do projeto e, na página "Contatos", clique no botão **Novo**.  
@@ -79,7 +79,7 @@ Você verá que há um pequeno botão à direita do campo de entrada "Cliente".
 	:align: center
 	:alt: Entrada Cliente
 
-Clique nele e selecione um registro no catálogo "Clientes":  
+Clique nele e selecione um registro no registro "Clientes":  
 os campos "Cliente", "Nome" e "Telefone" serão preenchidos automaticamente.
 
 .. image:: /intro/_images/customer_input_selected_jampy.png

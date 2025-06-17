@@ -3,7 +3,7 @@ Personalizando Formulários
 ==========================
 
 Ao atualizar a página do projeto, vemos que os campos da tabela e  
-do formulário de edição do diário "Contatos" são exibidos na ordem em que  
+do formulário de edição do registro "Contatos" são exibidos na ordem em que  
 foram criados.
 
 .. image:: /intro/_images/contacts_new_jampy.png
@@ -35,10 +35,10 @@ o cabeçalho da coluna correspondente. Depois salve todas as alterações clican
 	:align: center
 	:alt: view_contacts_order_by_jampy.png
 
-Para alterar a forma como os campos são exibidos no formulário de edição, clique no botão **Formulário de Edição**  
+Para alterar a forma como os campos são exibidos no formulário de edição (Edit Form), clique no botão **Formulário de Edição**  
 para abrir o  
 :doc:`Diálogo de Formulário de Edição </admin/items/edit_form_dialog>`.  
-Esse recurso funciona de forma muito semelhante ao **Formulário de Visualização** descrito acima.
+Esse recurso funciona de forma muito semelhante ao **Formulário de Visualização** (View Form) descrito acima.
 
 .. image:: /intro/_images/edit_contacts2_jampy.png
 	:scale: 50%
