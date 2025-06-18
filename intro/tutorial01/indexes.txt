@@ -2,7 +2,7 @@
 Índices
 =======
 
-Vamos definir a ordenação padrão dos registros do diário "Contatos".  
+Vamos definir a ordenação padrão dos registros do registro "Contatos".  
 Para isso, clique no botão  
 :doc:`Ordem </admin/items/order_dialog>`.
 
