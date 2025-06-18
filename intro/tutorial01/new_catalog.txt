@@ -1,11 +1,11 @@
 ===================================
-Novo Cadastro (Catalogs, no inglês)
+Novo Cadastro (Cadastros, no inglês)
 ===================================
 
 Vamos voltar à página do Construtor de Aplicações e criar um Cadastro chamado "Clientes".  
 Um Cadastro corresponde a uma nova tabela no banco de dados.
 
-Para fazer isso, selecione o grupo "Catalogs" na árvore do projeto e clique no botão **Novo** no canto inferior direito da página.
+Para fazer isso, selecione o grupo "Cadastros" na árvore do projeto e clique no botão **Novo** no canto inferior direito da página.
 
 .. image:: /intro/_images/catalogs_jampy.png
     :scale: 50%
@@ -22,7 +22,7 @@ identificador válido do Python.
 .. image:: /intro/_images/customers_new_jampy.png
     :scale: 50%
     :align: center
-    :alt: Novo catálogo de clientes
+    :alt: Novo Cadastro de clientes
 
 Em seguida, clique no botão **Novo** no canto inferior direito do diálogo para adicionar um novo campo. O
 :doc:`Editor de Campos </admin/items/field_editor_dialog>`
@@ -33,7 +33,7 @@ e clique no botão **OK**.
 .. image:: /intro/_images/firstname_jampy.png
     :scale: 50%
     :align: center
-    :alt: Novas tarefas do diário
+    :alt: Novas tarefas do registro
 
 Da mesma forma, adicione os campos "Sobrenome" e "Telefone". Ao adicionar o campo "Sobrenome",
 marque o atributo **Obrigatório**. Isso exige que o campo seja preenchido

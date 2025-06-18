@@ -86,8 +86,8 @@ relatórios no grupo **reports**.
 O journal **invoices** possui o detalhe **invoice_table**, que mantém uma lista 
 de faixas em uma fatura do cliente. 
 Portanto, há três itens com o mesmo nome 
-"invoice_table": a tabela de detalhes no grupo Details, detalhes para Journal/Invoices e
-detalhes para Catalogs/Tracks.
+"invoice_table": a tabela de detalhes no grupo Details, detalhes para Registro/Invoices e
+detalhes para Cadastros/Tracks.
 
 Cada item é um atributo de seu proprietário e todos os itens, tabelas e relatórios 
 também são atributos da tarefa (todos têm um ``item_name`` único).
@@ -103,7 +103,7 @@ do módulo cliente usando o método
 têm o item correspondente como o primeiro parâmetro também.
 
 Conhecendo um item, podemos acessar qualquer outro item da árvore de tarefas. Por exemplo, para
-acessar o catálogo **customers**, podemos escrever:
+acessar o Cadastro **customers**, podemos escrever:
 
 .. code-block:: js
 

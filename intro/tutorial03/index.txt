@@ -32,7 +32,7 @@ nomearemos o novo item como "Lista de tarefas" e adicionaremos os dois campos
 	:alt: new_detail_jampy.png
 
 
-Após salvar a "Lista de tarefas", selecione o diário "Contatos" e clique no botão  
+Após salvar a "Lista de tarefas", selecione o registro "Contatos" e clique no botão  
 **Detalhes** no painel direito para abrir o  
 :doc:`Diálogo de Detalhes </admin/items/details_dialog>`.  
 Clique no botão de seta para a direita para adicionar a "Lista de tarefas" aos detalhes de "Contatos"  
@@ -43,14 +43,14 @@ e clique no botão **OK** para salvar as alterações.
 	:align: center
 	:alt: details_dialog_jampy.png
 
-Um novo item "Lista de tarefas" será criado como filho do diário "Contatos".
+Um novo item "Lista de tarefas" será criado como filho do registro "Contatos".
 
 .. image:: /intro/_images/contacts_to_do_list_jampy.png
 	:scale: 50%
 	:align: center
 	:alt: contacts_to_do_list_jampy.png
 
-Selecione novamente o diário "Contatos" e clique no botão **Formulário de edição** para abrir o  
+Selecione novamente o registro "Contatos" e clique no botão **Formulário de edição** para abrir o  
 :doc:`Diálogo de Formulário de Edição </admin/items/edit_form_dialog>`.  
 Selecione a guia **Formulário**, clique no botão à direita do campo **Editar detalhes**  
 e marque a caixa "Lista de tarefas".
@@ -84,7 +84,7 @@ Clique nele para ver a lista de tarefas de todos os contatos.
 	:align: center
 	:alt: todo_all_jampy.png
 
-Selecione novamente o diário "Contatos" e clique no botão **Formulário de visualização** para abrir o  
+Selecione novamente o registro "Contatos" e clique no botão **Formulário de visualização** para abrir o  
 :doc:`Diálogo de Formulário de Visualização </admin/items/view_form_dialog>`.  
 Selecione a guia **Formulário**, clique no botão à direita do campo **Visualizar detalhe**  
 e marque a caixa "Lista de tarefas".

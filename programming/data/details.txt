@@ -5,7 +5,7 @@ Detalhes
 Detalhes são usados no framework para trabalhar com dados tabulares, pertencentes a um registro 
 na tabela de um item.
 
-Por exemplo, o **Journal de Faturas** no aplicativo de Demonstração possui o 
+Por exemplo, o **Registro de Faturas** no aplicativo de Demonstração possui o 
 detalhe **InvoiceTable**, que mantém uma lista de itens na fatura de um cliente.
 
 Detalhes e itens de detalhes compartilham a mesma tabela de banco de dados subjacente.

@@ -17,7 +17,7 @@ Campo lookup baseado em item lookup
 ===================================
 
 No framework, você pode adicionar um campo a um item para buscar informações na tabela de outro item. 
-Por exemplo, no catálogo **Álbuns** do aplicativo de demonstração existe o
+Por exemplo, no Cadastro **Álbuns** do aplicativo de demonstração existe o
 campo lookup **Artista**.
 
 .. image:: /programming/_images/albums_edit_form_jampy.png
@@ -25,7 +25,7 @@ campo lookup **Artista**.
 	:alt: albums_edit_form_jampy.png
 
 Para definir o valor do campo, o usuário deve clicar no botão à direita do campo de entrada 
-e selecionar um registro do catálogo ''Artistas'' que será exibido.
+e selecionar um registro do Cadastro ''Artistas'' que será exibido.
 Então o valor desse campo será o ID do registro.  
 Outra forma de definir o valor do campo é usar a digitação antecipada (typeahead), 
 se a opção **Typeahead** estiver marcada no 
@@ -54,7 +54,7 @@ Para acessar esses valores, use as seguintes propriedades dos campos lookup:
    :doc:`lookup_value </refs/client/field/at_lookup_value>`, :doc:`lookup_value </refs/server/field/at_lookup_value>`, "Um valor do campo de lookup na tabela do item de lookup."
 
 Às vezes, há a necessidade de ter dois ou mais valores do mesmo registro na 
-tabela do item de lookup. Por exemplo, o diário "Faturas" no Demo tem vários 
+tabela do item de lookup. Por exemplo, o registro "Faturas" no Demo tem vários 
 campos de lookup ("Cliente", "Endereço de Cobrança", "Cidade de Cobrança", e assim por diante) 
 que possuem informações sobre um cliente, todas armazenadas em um único registro na 
 tabela do item "Clientes", descrevendo esse cliente. Para evitar a criação 
@@ -93,7 +93,7 @@ Lista de valores
 ================
 
 Às vezes, a fonte de um campo de lookup pode ser definida como uma lista de valores. Por 
-exemplo, o campo **MediaType** no catálogo **Tracks** do 
+exemplo, o campo **MediaType** no Cadastro **Tracks** do 
 :doc:`Projeto Demo </intro/demo_project>` tem o atributo **Lookup value list** configurado 
 para a lista de lookup MediaTypes:
 

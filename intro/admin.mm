@@ -348,7 +348,7 @@
   </head>
   <body>
     <p>
-      When new project is created with jam-project, there are only 9 records (ending with ID=5) and each record might have corresponding record in SYS_FIELDS (ie Catalogs, Journals, Details, with ID 2,3,4 respectively)
+      When new project is created with jam-project, there are only 9 records (ending with ID=5) and each record might have corresponding record in SYS_FIELDS (ie Cadastros, Registros, Details, with ID 2,3,4 respectively)
     </p>
   </body>
 </html></richcontent>
@@ -367,7 +367,7 @@
       We just need to look at the ID information for everything.
     </p>
     <p>
-      Ie, Group &quot;test import&quot; has a Table with ID=8, and we want to move it to Group Journals with ID=3:
+      Ie, Group &quot;test import&quot; has a Table with ID=8, and we want to move it to Group Registros with ID=3:
     </p>
     <p>
       <font color="#ff0000">&#160; </font>
@@ -490,7 +490,7 @@
       Used to define what &quot;deleted&quot; field is for relevant table. In Demo F_DELETED_FLAG is 6, 4 or 2 for F_SOFT_DELETE=1. The 6,4 and 2 are ID rows in SYS_FIELDS (&quot;Deleted Flag&quot; F_NAME for OWNER_REC_ID tables 4,3,2 respectively).
     </p>
     <p>
-      However, some rows have F_DELETED_FLAG set and no F_SOFT_DELETE, which is ok since we do not want soft delete for this tables (ie Consumer table in Demo, or Catalogs Group).
+      However, some rows have F_DELETED_FLAG set and no F_SOFT_DELETE, which is ok since we do not want soft delete for this tables (ie Consumer table in Demo, or Cadastros Group).
     </p>
   </body>
 </html></richcontent>

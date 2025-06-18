@@ -71,7 +71,7 @@ Em seguida, ele atribui os eventos jQuery aos botões OK e Cancelar.
         });
     }
 
-O formulário de edição para o catálogo **Álbuns** é o seguinte:
+O formulário de edição para o Cadastro **Álbuns** é o seguinte:
 
 .. image:: /programming/_images/default_edit_form_template_jampy.png
 	:align: center
@@ -204,7 +204,7 @@ Este exemplo usa o sistema de grid do Bootstrap:
 
 
 
-Template de formulário de visualização de catálogos
+Template de formulário de visualização de Cadastros
 ---------------------------------------------------
 
 Neste exemplo, há uma div com a classe "form-header".
@@ -216,8 +216,8 @@ onclick para executar o método de visualização e recriar o formulário de vis
 
 Os elementos com os ids "selected-div" e "search-form" são usados no
 :doc:`on_view_form_created </refs/client/group/on_view_form_created>` do
-grupo de catálogos para exibir o valor atual de um campo de pesquisa quando o botão direito
-é clicado para selecionar um valor e para implementar a funcionalidade de pesquisa de catálogos
+grupo de Cadastros para exibir o valor atual de um campo de pesquisa quando o botão direito
+é clicado para selecionar um valor e para implementar a funcionalidade de pesquisa de Cadastros
 respectivamente.
 
 A div com a classe "view-table" é usada no 
@@ -288,7 +288,7 @@ do item (se existirem).
 
 .. image:: /programming/_images/catalogs_view_teplate_jampy.png
 	:align: center
-	:alt: Catalogs view form template
+	:alt: Cadastros view form template
 
 
 
@@ -345,7 +345,7 @@ Neste exemplo, a div com a classe "view-table" é removida e adicionadas duas
 divs "view-master" e "view-detail", onde tabelas para os itens mestre e detalhe
 são criadas no 
 :doc:`on_view_form_created </refs/client/item/on_view_form_created>`
-manipulador de eventos declarado no módulo cliente do diário **Faturas**:
+manipulador de eventos declarado no módulo cliente do registro **Faturas**:
 
 
 .. code-block:: js

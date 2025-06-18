@@ -46,7 +46,7 @@ Por exemplo, para o relatório **invoice** da aplicação Demo, este evento é o
     
 Primeiro, usamos o método 
 :doc:`copy </refs/server/item/m_copy>` 
-para criar uma cópia do diário de faturas.
+para criar uma cópia do registro de faturas.
 
 .. code-block:: py
 
@@ -63,7 +63,7 @@ Em seguida, chamamos o método `set_where` da cópia:
 
 onde `report.id.value` é o parâmetro de ID do relatório, cujo valor definimos no 
 manipulador de evento :doc:`on_before_print_report </refs/client/report/on_before_print_report>` 
-no cliente e que é igual ao valor atual do campo **id** do diário de **invoice**.
+no cliente e que é igual ao valor atual do campo **id** do registro de **invoice**.
 
 Depois, usando o método 
 :doc:`open </refs/server/item/m_open>`,

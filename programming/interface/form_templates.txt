@@ -51,7 +51,7 @@ Assim, o template
 		...
 	</div>
 
-será usado para criar formulários de edição dos itens que pertencem ao grupo **Journals** e que não possuem seu próprio template de formulário de edição.
+será usado para criar formulários de edição dos itens que pertencem ao grupo **Registros** e que não possuem seu próprio template de formulário de edição.
 
 Se, após essa busca, nenhum template for encontrado para o item, o template com a classe ``default-suffix`` 
 será usado para criar o formulário.

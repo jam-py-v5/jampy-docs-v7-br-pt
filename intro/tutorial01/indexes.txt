@@ -19,7 +19,7 @@ usando o botão **esquerda**, e altere sua prioridade usando os botões **cima**
 No exemplo acima, definimos a ordenação padrão como sendo  
 por data de contato decrescente.
 
-Podemos criar um índice correspondente para a tabela do banco de dados do diário “Contatos”.  
+Podemos criar um índice correspondente para a tabela do banco de dados do registro “Contatos”.  
 Clique no botão **Índices** para abrir o  
 :doc:`Diálogo de Índices </admin/items/indices_dialog>`  
 e depois clique no botão **Novo** e especifique o índice de forma semelhante:

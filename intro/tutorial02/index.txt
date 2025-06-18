@@ -7,7 +7,7 @@ Nesta parte, vamos demonstrar como trabalhar com arquivos e imagens no Jam.py.
 Adicionando campo de imagem
 ===========================
 
-Vamos selecionar o catálogo "Clientes", dar um duplo clique para abrir o  
+Vamos selecionar o Cadastro "Clientes", dar um duplo clique para abrir o  
 :doc:`Diálogo do Editor de Item </admin/items/item_editor_dialog>`  
 e adicionar um campo de imagem "Foto":
 
@@ -91,7 +91,7 @@ nos :doc:`Parâmetros </admin/project/parameters>` da aplicação, conforme a :d
 Adicionando campo de arquivo
 ============================
 
-Agora vamos adicionar um campo que armazenará um arquivo anexo no diário "Contatos".
+Agora vamos adicionar um campo que armazenará um arquivo anexo no registro "Contatos".
 
 .. image:: /intro/_images/file_field_jampy.png
 	:scale: 50%

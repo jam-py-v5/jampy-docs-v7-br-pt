@@ -57,7 +57,7 @@ Os seguintes campos podem ser especificados:
   para esse parâmetro aparecerá no formulário.
 
 É possível criar um parâmetro de pesquisa. Por exemplo, o relatório **Customer purchases** 
-tem um parâmetro **Customer** que pode ser selecionado a partir do catálogo **Customers**:
+tem um parâmetro **Customer** que pode ser selecionado a partir do Cadastro **Customers**:
 
 .. image:: /programming/_images/lookup_param_jampy.png
     :align: center

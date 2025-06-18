@@ -4,7 +4,7 @@ Campos de seleção
 
 Agora, vamos criar o registro "Contatos" e usar campos de seleção (Lookup) para conectar contatos aos clientes. Campos de seleção (Lookup) permitem que um elemento de um item (ou seja, Cadastro ou Registro) referencie um elemento de outro item.
 
-Selecione o grupo "Journals" (registros) na árvore de tarefas do projeto e adicione um novo registro (Journal) 
+Selecione o grupo "Registros" (registros) na árvore de tarefas do projeto e adicione um novo registro (Registro) 
 da mesma forma que criamos o cadastro "Clientes". Registros, assim como cadastros, 
 correspondem a diferentes tabelas no banco de dados. Veja este :doc:`link </faq/faq_catalogs_vs_journals>` para mais informações.
 
